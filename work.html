@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Motion Pirate - Work</title>
+    <link rel="icon" type="image/x-icon" href="mpFavicon.webp">
+    <link rel="stylesheet" href="./styles/header.css">
+    <link rel="stylesheet" href="./styles/main.css">
+    <link rel="stylesheet" href="./styles/work.css">
+    <link rel="stylesheet" href="./styles/combined-projects.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk&family=Inter:wght@500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header remains the same -->
+    <header>
+        <a href="/">
+        <div class="logo-container">
+            <img src="./images/icons/MPLogo_Cube_bNw.svg" alt="Motion Pirate Logo" width="40" height="40">
+            <span class="logo-text">motionpirate</span>
+        </div>
+        </a>
+        <button class="mobile-menu-btn">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
+            </svg>
+        </button>
+        <nav>
+            <a href="/">main</a>
+            <a href="/work.html">work</a>
+            <a href="/contact.html">contact</a>
+        </nav>
+    </header>
+
+    <main>
+        <div class="top-sections-container">
+            <!-- Case Studies Section -->
+            <section class="case-studies">
+                <div class="case-studies-grid">
+                <div id="case-studies-loading">Loading case studies...</div>
+                </div>
+                <div class="section-info">
+                     <h2>Case Studies</h2>
+                    <p class="subtitle">Creating stories, brand Development, the longer work.</p>
+                    <p class="description">See behind the scenes and dig into the strategy and process for a few selected case studies.</p>
+                </div>
+            </section>
+            
+            <!-- Featured Projects Section -->
+            <section class="featured-projects">
+                <div class="featured-projects-grid">
+                <div id="featured-projects-loading">Loading featured projects...</div>
+                </div>
+                <div class="section-info">
+                <h2>Featured Projects</h2>
+                <p class="subtitle">Highlighted work and recent accomplishments.</p>
+                <p class="description">Explore our selected featured projects showcasing the best of our capabilities.</p>
+                </div>
+            </section>
+        </div>
+
+        <!-- Work Section -->
+        <section class="work">
+            <h2>work</h2>
+            <div class="work-grid">
+                <!-- First tile with alt description -->
+                <article class="gallery-tile with-description">
+                    <div class="gallery-image">
+                        <img src="./images/placeholder.jpg" alt="Gallery Item 1">
+                        <div class="description-overlay">
+                            <span>alt description</span>
+                        </div>
+                    </div>
+                </article>
+                <!-- Remaining gallery tiles -->
+                <article class="gallery-tile">
+                    <div class="gallery-image">
+                        <img src="./images/placeholder.jpg" alt="Gallery Item">
+                        <div class="gallery-overlay">
+                            <span>galleryTile</span>
+                        </div>
+                    </div>
+                </article>
+                <!-- Repeat for remaining tiles (15 more) -->
+            </div>
+        </section>
+    </main>
+
+    <script>
+        // Mobile menu functionality
+        document.addEventListener('DOMContentLoaded', function() {
+    const workGrid = document.querySelector('.work-grid');
+    
+    // Function to load all projects
+    async function loadProjects() {
+        try {
+            // Fetch the list of project files (you might need a server-side solution for this)
+            // For now, we'll use a direct fetch to the projects directory and handle any errors
+            const response = await fetch('./data/json-index/project-index.json');
+            const projectsIndex = await response.json();
+            
+            // Array to store all project promises
+            const projectPromises = projectsIndex.projects.map(projectInfo => {
+                return fetch(projectInfo.path)
+                    .then(response => response.json())
+                    .then(projectData => {
+                        return { ...projectData, path: projectInfo.path };
+                    });
+            });
+            
+            // Wait for all projects to load
+            const projects = await Promise.all(projectPromises);
+            
+            // Clear any existing content
+            workGrid.innerHTML = '';
+            
+            // Create a tile for each project
+            projects.forEach(project => {
+                // Find the hero image for the tile
+                const thumbnailImage = project.images.find(img => img.type === 'thumbnail') || project.images[0];
+                
+                // Create tile element
+                const tile = document.createElement('article');
+                tile.className = 'gallery-tile';
+                
+                // Create image container
+                const imageContainer = document.createElement('div');
+                imageContainer.className = 'gallery-image';
+                
+                // Create image
+                const img = document.createElement('img');
+                img.src = thumbnailImage.url;
+                img.alt = project.title;
+                
+                // Create overlay with project title
+                const overlay = document.createElement('div');
+                overlay.className = 'gallery-overlay';
+                
+                const title = document.createElement('span');
+                title.textContent = project.title;
+                overlay.appendChild(title);
+                
+                // Assemble the tile
+                imageContainer.appendChild(img);
+                imageContainer.appendChild(overlay);
+                tile.appendChild(imageContainer);
+                
+                // Add click handler to navigate to project page
+                tile.addEventListener('click', function() {
+                    // Store the project ID in localStorage for the project page to use
+                    localStorage.setItem('selectedProjectId', project.id);
+                    // Navigate to the project detail page
+                    window.location.href = 'project-page-template.html';
+                });
+                
+                // Add the tile to the grid
+                workGrid.appendChild(tile);
+            });
+            
+        } catch (error) {
+            console.error('Error loading projects:', error);
+            workGrid.innerHTML = '<p class="error-message">Error loading projects. Please try again later.</p>';
+        }
+    }
+    
+    // Load all projects
+    loadProjects();
+        });
+    </script>
+
+    <script src="./js/combined-loader.js"></script>
+
+</body>
+</html>

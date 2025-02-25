@@ -1,0 +1,15 @@
+{
+    "caseStudies": [
+      {
+        "id": "animationShowreel",
+        "path": "./data/projects/project-template.json",
+        "additional": "extraText",
+        "order": 1
+      },
+      {
+        "id": "brandCommercial",
+        "path": "./data/projects/project-template.json",
+        "order": 2
+      }
+    ]
+  }

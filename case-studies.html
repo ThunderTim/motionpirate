@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Motion Pirate - Case Studies</title>
+    <link rel="icon" type="image/x-icon" href="mpFavicon.webp">
+    <link rel="stylesheet" href="./styles/header.css">
+    <link rel="stylesheet" href="./styles/work.css">
+    <link rel="stylesheet" href="./styles/contact.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk&family=Inter:wght@500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header remains the same -->
+    <header>
+        <div class="logo-container">
+            <img src="./images/icons/MPLogo_Cube_bNw.svg" alt="Motion Pirate Logo" width="40" height="40">
+            <span class="logo-text">motionpirate</span>
+        </div>
+        <button class="mobile-menu-btn">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
+            </svg>
+        </button>
+        <nav>
+            <a href="/">main</a>
+            <a href="/work.html">work</a>
+            <a href="/contact.html">contact</a>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Case study titles section / present the project -->
+        <div class="contact-info-section">
+            <section class="contact-sections-container">
+                <div class="section-info contact-info">
+                    <div class="contact-icons-container">
+                        <img src="./images/icons/iconGear.png" alt="case studies icon">
+                    </div>
+                    <h2>Case Studies</h2>
+                    <p class="subtitle">Dig a little deeper into some our select projects.</p>
+                    <p class="description">We'll dive deep into a few longer form works.</p>
+                </div>
+            </section>
+            
+            <!-- Case studies will be loaded here -->
+            <div id="caseStudiesContainer"></div>
+            
+            <!-- Template for a case study section (hidden, will be cloned by JS) -->
+            <template id="caseStudyTemplate">
+                <section class="case-study-section">
+                    <div>
+                        <h2 class="cs-title"></h2>
+                        <p class="cs-subtitle"></p>
+                        <p class="cs-description"></p>
+                        <p class="cs-full-description"></p>
+                        <div class="cs-image-container">
+                            <!-- Images will be inserted here -->
+                        </div>
+                    </div>
+                </section>
+            </template>
+        </div>
+    </main>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+    const caseStudiesContainer = document.getElementById('caseStudiesContainer');
+    
+    // Fetch the case studies index
+    fetch("./data/json-index/case-study-index.json")
+        .then(response => response.json())
+        .then(indexData => {
+            // Sort case studies by order property if it exists
+            const sortedCaseStudies = indexData.caseStudies.sort((a, b) => 
+                (a.order || 0) - (b.order || 0)
+            );
+            
+            // Create an array to store all case study fetch promises
+            const caseStudyPromises = sortedCaseStudies.map(caseStudyInfo => {
+                return fetch(caseStudyInfo.path)
+                    .then(response => response.json())
+                    .then(projectData => {
+                        // Combine the index info with the project data
+                        return { 
+                            order: caseStudyInfo.order, 
+                            ...projectData 
+                        };
+                    });
+            });
+            
+            // Wait for all case studies to be fetched
+            return Promise.all(caseStudyPromises);
+        })
+        .then(allCaseStudies => {
+            // For each case study, create a section on the page
+            allCaseStudies.forEach((project, index) => {
+                // Create the case study section
+                const section = document.createElement('section');
+                section.id = `caseStudy${(index + 1).toString().padStart(2, '0')}`;
+                section.className = 'case-study-section';
+                
+                // Create content container
+                const contentDiv = document.createElement('div');
+                
+                // Add title and client info
+                const title = document.createElement('h2');
+                title.className = 'cs-title';
+                title.textContent = project.title;
+                contentDiv.appendChild(title);
+                
+                // Add client info if available
+                if (project.client) {
+                    const client = document.createElement('p');
+                    client.className = 'cs-client';
+                    client.textContent = `Client: ${project.client}`;
+                    contentDiv.appendChild(client);
+                }
+                
+                // Add project type if available
+                if (project.projectType && project.projectType.length) {
+                    const projectType = document.createElement('p');
+                    projectType.className = 'cs-project-type';
+                    projectType.textContent = `Project Type: ${project.projectType.join(', ')}`;
+                    contentDiv.appendChild(projectType);
+                }
+                
+                // Add description
+                const description = document.createElement('p');
+                description.className = 'cs-description';
+                description.textContent = project.description;
+                contentDiv.appendChild(description);
+                
+                // Add hero image if available
+                if (project.images && project.images.length) {
+                    const imageContainer = document.createElement('div');
+                    imageContainer.className = 'cs-image-container';
+                    
+                    // Find hero image
+                    const heroImage = project.images.find(img => img.type === 'hero');
+                    if (heroImage) {
+                        console.log("Found hero image:", heroImage); // Debugging
+                        const img = document.createElement('img');
+                        img.src = heroImage.url;
+                        img.alt = heroImage.alt || project.title;
+                        img.className = 'cs-hero-image';
+                        img.id = `cs-image${(index + 1).toString().padStart(2, '0')}`;
+                        
+                        // Add caption if available
+                        if (heroImage.caption) {
+                            const caption = document.createElement('figcaption');
+                            caption.textContent = heroImage.caption;
+                            const figure = document.createElement('figure');
+                            figure.appendChild(img);
+                            figure.appendChild(caption);
+                            imageContainer.appendChild(figure);
+                        } else {
+                            imageContainer.appendChild(img);
+                        }
+                    }
+                    
+                    // Add other images (process, stills)
+                    const otherImages = project.images.filter(img => img.type !== 'hero');
+                    if (otherImages.length) {
+                        const otherImagesContainer = document.createElement('div');
+                        otherImagesContainer.className = 'cs-other-images';
+                        
+                        otherImages.forEach((imageData, imgIndex) => {
+                            console.log("Processing other image:", imageData); // Debugging
+                            const img = document.createElement('img');
+                            img.src = imageData.url;
+                            img.alt = imageData.alt || `${project.title} - image ${imgIndex + 1}`;
+                            img.className = `cs-${imageData.type}-image`;
+                            
+                            if (imageData.caption) {
+                                const caption = document.createElement('figcaption');
+                                caption.textContent = imageData.caption;
+                                const figure = document.createElement('figure');
+                                figure.appendChild(img);
+                                figure.appendChild(caption);
+                                otherImagesContainer.appendChild(figure);
+                            } else {
+                                otherImagesContainer.appendChild(img);
+                            }
+                        });
+                        
+                        imageContainer.appendChild(otherImagesContainer);
+                    }
+                    
+                    contentDiv.appendChild(imageContainer);
+                }
+                
+                // Add embedded video if available
+                if (project.videos && project.videos.length) {
+                    const videoContainer = document.createElement('div');
+                    videoContainer.className = 'cs-video-container';
+                    
+                    // Find main video
+                    const mainVideo = project.videos.find(vid => vid.type === 'main') || project.videos[0];
+                    if (mainVideo && mainVideo.platform === 'vimeo') {
+                        // Create options string
+                        const options = mainVideo.options || {};
+                        const optionsStr = Object.entries(options)
+                            .map(([key, value]) => `${key}=${value}`)
+                            .join('&');
+                        
+                        // Create iframe
+                        const iframe = document.createElement('iframe');
+                        iframe.src = `https://player.vimeo.com/video/${mainVideo.id}?${optionsStr}`;
+                        iframe.width = '100%';
+                        iframe.height = '360';
+                        iframe.frameBorder = '0';
+                        iframe.allow = 'autoplay; fullscreen; picture-in-picture';
+                        iframe.allowFullscreen = true;
+                        
+                        videoContainer.appendChild(iframe);
+                    }
+                    
+                    contentDiv.appendChild(videoContainer);
+                }
+                
+                // Add labels/tags if available
+                if (project.skillLabels && project.skillLabels.length) {
+                    const labelsContainer = document.createElement('div');
+                    labelsContainer.className = 'cs-labels-container';
+                    
+                    const labelTitle = document.createElement('h3');
+                    labelTitle.textContent = 'Skills:';
+                    labelsContainer.appendChild(labelTitle);
+                    
+                    const labelsList = document.createElement('ul');
+                    labelsList.className = 'cs-skills-list';
+                    
+                    project.skillLabels.forEach(skill => {
+                        const skillItem = document.createElement('li');
+                        skillItem.textContent = skill;
+                        labelsList.appendChild(skillItem);
+                    });
+                    
+                    labelsContainer.appendChild(labelsList);
+                    contentDiv.appendChild(labelsContainer);
+                }
+
+            
+                // Add section to the container
+                section.appendChild(contentDiv);
+                caseStudiesContainer.appendChild(section);
+                if (project.casestudy) {
+    const studyContainer = document.createElement('div');
+    studyContainer.className = 'cs-case-study-details';
+    
+    // Add section title
+    const studyTitle = document.createElement('h3');
+    studyTitle.textContent = 'Case Study Details';
+    studyContainer.appendChild(studyTitle);
+    
+    // Create challenge section if available
+    if (project.casestudy.challenge) {
+        const challengeSection = document.createElement('div');
+        challengeSection.className = 'cs-challenge-section';
+        
+        const challengeTitle = document.createElement('h4');
+        challengeTitle.textContent = 'Challenge:';
+        challengeSection.appendChild(challengeTitle);
+        
+        const challengeText = document.createElement('p');
+        challengeText.textContent = project.casestudy.challenge;
+        challengeSection.appendChild(challengeText);
+        
+        studyContainer.appendChild(challengeSection);
+    }
+    
+    // Create approach section if available
+    if (project.casestudy.approach) {
+        const approachSection = document.createElement('div');
+        approachSection.className = 'cs-approach-section';
+        
+        const approachTitle = document.createElement('h4');
+        approachTitle.textContent = 'Approach:';
+        approachSection.appendChild(approachTitle);
+        
+        const approachText = document.createElement('p');
+        approachText.textContent = project.casestudy.approach;
+        approachSection.appendChild(approachText);
+        
+        studyContainer.appendChild(approachSection);
+    }
+    
+    // Create results section if available
+    if (project.casestudy.results) {
+        const resultsSection = document.createElement('div');
+        resultsSection.className = 'cs-results-section';
+        
+        const resultsTitle = document.createElement('h4');
+        resultsTitle.textContent = 'Results:';
+        resultsSection.appendChild(resultsTitle);
+        
+        const resultsText = document.createElement('p');
+        resultsText.textContent = project.casestudy.results;
+        resultsSection.appendChild(resultsText);
+        
+        studyContainer.appendChild(resultsSection);
+    }
+    
+    // Add the entire case study container to the content div
+    contentDiv.appendChild(studyContainer);
+}
+
+                
+
+
+            });
+        })
+        .catch(error => {
+            console.error('Error loading case studies:', error);
+            // Handle error
+        });
+});
+    </script>
+</body>
+</html>

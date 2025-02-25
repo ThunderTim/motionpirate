@@ -1,0 +1,568 @@
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: 
+        radial-gradient(circle at 0% 0%, rgba(45, 45, 60, 0.3), transparent 50%),
+        radial-gradient(circle at 100% 0%, rgba(40, 40, 70, 0.3), transparent 50%),
+        radial-gradient(circle at 100% 100%, rgba(57, 57, 86, 0.471), transparent 50%),
+        radial-gradient(circle at 0% 100%, rgba(20, 17, 28, 0.611), transparent 50%);
+    filter: blur(2px);
+    z-index: -1;
+    pointer-events: none;
+}
+
+/* Add a subtle noise texture */
+body::after {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.7' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+    opacity: 0.05;
+    z-index: -1;
+    pointer-events: none;
+}
+
+/* Update your body background to be slightly darker */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+    overflow-x: hidden;
+    background: #000000;  /* Slightly darker than before */
+    color: #FFFFFF;
+}
+
+
+.hero-section {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    background-color: #000;
+}
+
+/* Video Container Styles */
+.video-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 177.78vh; /* 16:9 aspect ratio */
+    height: 100vh;
+    min-width: 100vw;
+    min-height: 56.25vw;
+    object-fit: cover; /* Ensures it fully covers the screen */
+    pointer-events: none;
+}
+
+
+
+/* Play Button Styles */
+.play-button-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: auto;
+    height: auto;
+    pointer-events: auto; /* Ensures it remains clickable */
+}
+
+
+
+.play-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    text-shadow: 2px 2px 5px black;
+    filter: drop-shadow(10px 10px 10px rgb(0 0 0 / 0.4));
+}
+
+.play-button:hover {
+    transform: scale(1.1);
+}
+
+.play-button img {
+    width: 40px;
+    height: 40px;
+    
+}
+
+.play-reel-cta {
+    margin: 0;
+    padding-top: 0.5rem;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    color: #f1f1f1;
+    font-size: 1rem;
+    
+    
+}
+
+/* Solid border */
+hr.solid {
+    border-top: .15px solid #bbb;
+}
+
+/* First, define the keyframes for the fade-up animation */
+@keyframes fadeUpIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Style the container and make all direct children animated */
+.name-overlay {
+    position: absolute;
+    bottom: 2%;
+    left: 4%;
+    color: #f1f1f1;
+    z-index: 4;
+    padding: 2rem 2rem;
+    mix-blend-mode: difference;
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.9;
+}
+.line-overlay{
+    position: absolute;
+    bottom: 11.2%;
+    right: 4%;
+    color: #f1f1f10e;
+    z-index: 4;
+    padding: 2rem 2rem;
+    mix-blend-mode: difference;
+    height: 2rem;
+    width: 15rem;
+    font-family: 'Inter', sans-serif;
+    ;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.9;
+    
+    animation: fadeUpIn 2.67s ease-out forwards;
+    animation-delay: 0.2s;
+    opacity: 0; /* Start invisible */
+
+}
+
+/* Animate each element with different delays */
+.name-overlay > p:first-child {
+    animation: fadeUpIn 0.8s ease-out forwards;
+    animation-delay: 0.2s;
+    opacity: 0; /* Start invisible */
+}
+
+
+.name-overlay > hr {
+    animation: fadeUpIn 0.8s ease-out forwards;
+    animation-delay: 0.6s;
+    opacity: 0;
+}
+
+.name-overlay-description {
+    color: #FF79C6;
+    animation: fadeUpIn 1s ease-out forwards;
+    animation-delay: 1s;
+    opacity: 0;
+}
+
+/* Updated Preloader Image Styles */
+.preloader-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../images/preloader.jpg'); /* Keep the path that works for you */
+    background-size: cover;
+    background-position: center;
+    z-index: 2; /* Higher z-index to ensure it's visible */
+    opacity: 1;
+    display: block;
+    transition: opacity  .5s ease-out; /* Smooth transition for opacity */
+    pointer-events: none; /* Allow clicks through to elements beneath */
+}
+
+/* Add fade-out effect when video is ready */
+.preloader-image.fade-out {
+    opacity: 0;
+    
+}
+
+
+
+/* Modal Styles */
+.video-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    z-index: 1000;
+    display: none;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.video-modal.active {
+    display: flex;
+    opacity: 1;
+}
+
+.modal-content {
+    position: relative;
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    background: #000;
+}
+
+.close-modal {
+    position: absolute;
+    top: -40px;
+    right: -40px;
+    width: 30px;
+    height: 30px;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+.modal-video-container {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+    height: 0;
+    overflow: hidden;
+}
+
+.modal-video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+/* Aspect Ratio Handling */
+@media (min-aspect-ratio: 16/9) {
+    .video-container iframe {
+        height: 56.25vw;
+    }
+}
+
+@media (max-aspect-ratio: 16/9) {
+    .video-container iframe {
+        width: 177.78vh;
+    }
+}
+
+main {
+    position: relative;
+    z-index: 1;
+}
+.inverted {
+    mix-blend-mode: difference;
+     filter: invert(1);
+  }
+
+  /* Content Section Styles */
+.top-sections-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 4rem;
+}
+
+/* Title Section Typography */
+.title-section h1 {
+    font-family: 'Inter', sans-serif;
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin: 0 0 2rem 0;
+    line-height: 1.2;
+}
+
+.title-section h1 span {
+    display: block;
+}
+
+/* Specific title colors */
+.title-creative {
+    color: #FFFFFF; /* Keeping first line white */
+}
+
+.title-motion {
+    color: #257FE5; /* Blue color for Motion Designer */
+}
+
+.title-builder {
+    color: #BC93F9; /* Purple color for Team Builder */
+}
+
+.title-section p {
+    font-family: 'Inter', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 400;
+    line-height: 1.6;
+    margin: 1rem 0;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.title-section p:first-of-type {
+    font-size: 1.25rem;
+    font-weight: 500;
+    color: #FFFFFF;
+    margin-bottom: 2rem;
+}
+
+
+/* Skills Grid Container */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+    margin: 4rem auto;
+    background: #0505054e;
+    border-radius: 1rem;
+    padding: 3rem;
+    max-width: 100%;
+    
+}
+
+/* Individual Skills Column */
+.skills-column {
+    color: #8d8d8d;
+    padding: 0 1rem;
+}
+
+.skills-column:first-child {
+    padding-left: 0;
+    
+}
+
+.skills-column:last-child {
+    padding-right: 0;
+}
+
+.skills-column h3 {
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 1.25rem;
+    margin-bottom: 1.5rem;
+    color: #8d8d8d;
+}
+
+.skills-column ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+}
+
+.skills-column ul li {
+    position: relative;
+    padding-left: 1.25rem;
+    margin-bottom: 0.75rem;
+    line-height: 1.6;
+}
+/* Add bullet points */
+.skills-column ul li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: #666;
+}
+
+/* Philosophy Statement Typography */
+.philosophy-statement blockquote {
+    font-family: 'Inter', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 500;
+    line-height: 1.4;
+    margin: 0;
+    padding: 0;
+}
+
+/* Client Quotes */
+.client-quotes {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10rem;
+    padding: 15rem 2rem;
+    
+    
+}
+
+.quote-card {
+    margin-bottom: 2rem;
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+
+/* Client Quotes Typography */
+.quote-card h2 {
+    font-family: 'Inter', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 500;
+    line-height: 1.4;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+.attribution {
+    margin-top: 1rem;
+    text-align: left;
+    
+}
+
+.attribution p {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 0.9rem;
+    line-height: 1.4;
+    margin: 0.25rem 0;
+    color: rgba(255, 255, 255, 0.7);
+    
+}
+
+/* Company Logo Grid */
+/* Company Logo Grid */
+.company-logo-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(200px, 1fr));
+    gap: 2rem;
+    padding: 2rem 0;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 200px;
+}
+
+.logo-item img {
+    max-width: 50%;
+    height: auto;
+    object-fit: contain;
+}
+
+/* Footer */
+footer {
+    margin-top: 6rem;
+    padding: 3rem 2rem;
+    
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-logo-text{
+    color: #FFFFFF;
+}
+/* Footer Typography */
+.footer-text p {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 0.875rem;
+    line-height: 1.6;
+    color: rgba(143, 143, 143, 0.6);
+    margin: 0.5rem 0;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    
+    
+    .company-logo-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .title-section h1 {
+        font-size: 2.5rem;
+    }
+    
+    
+    
+    .philosophy-statement {
+        font-size: 2rem;
+    }
+    
+    .company-logo-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .company-logo-grid {
+        grid-template-columns: 1fr;
+    }
+}
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+    .skills-grid {
+        grid-template-columns: repeat(2, 1fr);
+        padding: 2rem;
+    }
+    
+    .skills-column {
+        padding: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .skills-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+}

@@ -1,0 +1,249 @@
+/* Case-studies and featured-projects grid should take up available space */
+.case-studies-grid,
+.featured-projects-grid {
+  flex: 1; /* Take up remaining space */
+  margin-bottom: 2rem;
+}/* ======================================
+   SHARED STYLES FOR WORK SECTIONS
+   ====================================== */
+
+/* Container for both sections */
+.top-sections-container {
+  display: flex;
+  flex-direction: row; /* Side by side on desktop */
+  flex-wrap: wrap; /* Wrap when needed */
+  gap: 2rem;
+  width: 100%;
+  max-width: 100%;
+}
+
+/* Make each section take up roughly half the container width and same height */
+.case-studies,
+.featured-projects {
+  flex: 1;
+  min-width: 300px; /* Minimum width before wrapping */
+  padding: 2rem;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column; /* Stack content vertically within each section */
+}
+
+/* Common section container styles */
+.case-studies,
+.featured-projects {
+  padding: 4rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Section info styles */
+.section-info {
+  margin-bottom: 3rem;
+  text-align: left; /* Align text to the left */
+  margin-top: auto; /* Push to the bottom of the flex container */
+}
+
+
+/* Loading indicator */
+#case-studies-loading,
+#featured-projects-loading {
+  text-align: center;
+  padding: 2rem;
+  color: #666;
+  font-style: italic;
+}
+
+/* Error message styling */
+.error-message {
+  text-align: center;
+  padding: 2rem;
+  background-color: #fff5f5;
+  color: #e53e3e;
+  border-radius: 0.5rem;
+  border: 1px solid #feb2b2;
+}
+
+/* Item hover effect */
+.case-study:hover,
+.featured-project:hover {
+  transform: translateY(-0px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+/* Overlay styling */
+.case-study-overlay,
+.featured-project-overlay {
+  position: absolute;
+  top: 0; /* Set top to 0 to ensure full coverage */
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%; /* Ensure full width */
+  height: 100%; /* Ensure full height */
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+  color: white;
+  padding: 1.5rem;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  display: flex;
+  align-items: flex-end;
+  pointer-events: none;
+  
+}
+
+.case-study:hover .case-study-overlay,
+.featured-project:hover .featured-project-overlay {
+    outline: 5px solid red;
+  opacity: 1;
+}
+
+.case-study-overlay .title,
+.featured-project-overlay .title {
+  font-size: .76rem;
+  font-weight: 500;
+  padding: 0px;
+  margin: 0px;
+  display: block;
+  
+  width: 100%; /* Ensures the title takes full width */
+  text-align: center; /* Consistent text alignment */
+}
+
+/* Common image styling */
+.case-study-image,
+.featured-project-image {
+  position: relative;
+  overflow: hidden;
+  
+  background-color: #f7f7f7; /* Might be causing the white edge */
+  background-blend-mode: darken; /* Helps blend with the overlay */
+  display: flex
+  
+}
+
+
+.case-study-image img,
+.featured-project-image img {
+  width: 100%;
+  display: block;
+  transition: transform 0.5s ease;
+  object-fit: cover;
+  
+}
+
+.case-study:hover .case-study-image img,
+.featured-project:hover .featured-project-image img {
+  transform: scale(1.87);
+}
+
+/* Cursor styling */
+.case-study,
+.featured-project {
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* ======================================
+   CASE STUDIES SPECIFIC STYLES 
+   ====================================== */
+
+.case-studies-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.case-study {
+  border-radius: 0.5rem;
+  overflow: hidden;
+  background-color: rgb(0, 0, 0);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Tall, column-like images for case studies */
+.case-study-image {
+  height: 300px; /* Taller height for column-like appearance */
+}
+
+.case-study-image img {
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* ======================================
+   FEATURED PROJECTS SPECIFIC STYLES 
+   ====================================== */
+
+.featured-projects-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* More columns for square images */
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+.featured-project {
+  border-radius: 0.5rem;
+  overflow: hidden;
+  background-color: rgb(0, 0, 0);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Square images for featured projects */
+.featured-project-image {
+  height: 300px; /* Match the case study image height */
+  /* Remove aspect-ratio to match the case study images */
+}
+
+.featured-project-image img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* ======================================
+   RESPONSIVE ADJUSTMENTS
+   ====================================== */
+
+@media (max-width: 1024px) {
+  .case-studies-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .featured-projects-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  /* Stack sections vertically on smaller screens */
+  .top-sections-container {
+    flex-direction: column;
+    gap: 3rem;
+  }
+  
+  .case-studies-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .featured-projects-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .section-info h2 {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .featured-projects-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .case-study-image,
+  .featured-project-image {
+    height: 300px;
+  }
+}

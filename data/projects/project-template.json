@@ -1,0 +1,71 @@
+{
+  "id": "project-template",
+  "title": "Template Title Brand Campaign",
+  "subtitle": "Any subtitle about the project should go here",
+  "client": "Client Name Company",
+  "projectType": [
+      "branding",
+      "animation",
+      "motion design"
+  ],
+  "description": "This is where the descripttion text goes, here is some default text to fill out the space",
+  "extendedsDescription":"This is where any extra extended description for the project goes ",
+  "videosDescription":"This is where any extra description for the images goes ",
+  "videos": [
+      {
+          "platform": "vimeo",
+          "id": "903770926",
+          "type": "main",
+          "options": {
+              "autoplay": false,
+              "loop": true,
+              "title": false,
+              "byline": false,
+              "portrait": false,
+              "color": "ff9933"
+          }
+      }
+  ],
+  "imagesDescription":"This is where any extra description for the images goes ",
+
+  "images": [
+      {
+          "url": "./images/projects/project-template/tall-blue.jpg",
+          "alt": "Brand Evolution Hero Shot",
+          "type": "hero",
+          "caption": "Final key visual from the campaign"
+      },
+      {
+          "url":"./images/projects/project-template/tall-blue.jpg",
+          "alt": "Design Process Shot 1",
+          "type": "process",
+          "caption": "Early concept development"
+      },
+      {
+          "url": "./images/projects/project-template/wide-red.jpg",
+          "alt": "Animation Still 1",
+          "type": "still",
+          "caption": "Key moment from main animation"
+      }
+  ],
+  "skillLabels": [
+      "motion-design",
+      "3d-animation",
+      "branding"
+  ],
+  "softwareLabels": [
+      "after-effects",
+      "cinema-4d",
+      "photoshop"
+  ],
+  "casestudy": {
+    "challenge": "challenge text",
+    "approach": "the approach",
+    "results": "results"
+  },
+
+  "credits": {
+    "credit1": "credit / worked on project",
+    "credit2": "would like to add additional credits as needed"
+  }
+}

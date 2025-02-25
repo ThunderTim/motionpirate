@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Main Page - open populate test</title>
+</head>
+<body>
+    <!-- Image container now uses an img tag -->
+    <img id="imageContainer" alt="Logo">
+    
+    <!-- Text fields -->
+    <h1 id="titleText"></h1>
+    <h2 id="subtitleText"></h2>
+
+    <script>
+        // Fetch the JSON file
+        fetch('content.json')
+            .then(response => response.json())
+            .then(data => {
+                // Set the image source
+                document.getElementById('imageContainer').src = data.svgImage;
+                
+                // Set the text content
+                document.getElementById('titleText').textContent = data.title;
+                document.getElementById('subtitleText').textContent = data.subtitle;
+            })
+            .catch(error => console.error('Error loading the JSON:', error));
+    </script>
+</body>
+</html>

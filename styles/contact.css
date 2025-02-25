@@ -1,0 +1,41 @@
+/* Add new styles for the horizontal layout */
+.contact-sections-container {
+    display: flex;
+    width: 100%;
+    margin-bottom: 2rem;
+    padding: 2rem 4rem;
+    
+    
+}
+
+.contact-info-section{
+    
+    margin-top: 4rem;
+    margin-bottom: 15rem;
+    padding: 4rem 2rem;
+}
+
+.contact-info {
+    margin: 2rem 0 2rem;
+}
+
+.contact-icons-container {
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 1rem;
+
+}
+
+.resume-Icon{
+    max-width: 65px;
+}
+
+.contact-link {
+    text-decoration: none;
+    color: inherit; /* Keeps the same color as your h2 */
+    transition: opacity 0.3s ease;
+}
+
+.contact-link:hover {
+    opacity: 0.7; /* Subtle hover effect */
+}

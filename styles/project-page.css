@@ -1,0 +1,344 @@
+/* Project page specific styles */
+
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: 
+        radial-gradient(circle at 0% 0%, rgba(45, 45, 60, 0.3), transparent 50%),
+        radial-gradient(circle at 100% 0%, rgba(40, 40, 70, 0.3), transparent 50%),
+        radial-gradient(circle at 100% 100%, rgba(57, 57, 86, 0.471), transparent 50%),
+        radial-gradient(circle at 0% 100%, rgba(20, 17, 28, 0.611), transparent 50%);
+    filter: blur(2px);
+    z-index: -1;
+    pointer-events: none;
+}
+
+/* Add a subtle noise texture */
+body::after {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.7' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+    opacity: 0.05;
+    z-index: -1;
+    pointer-events: none;
+}
+
+/* Update your body background to be slightly darker */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+    overflow-x: hidden;
+    background: #000000;  /* Slightly darker than before */
+    color: #FFFFFF;
+}
+
+
+/* Main container */
+#projectContainer {
+    
+    margin: 0 auto;
+    padding: 20px;
+    position: relative; /* Make it a positioning context */
+    transition: none; /* Prevent any automatic transitions */
+    
+  
+}
+
+/* Project section */
+.project-section {
+    margin-bottom: 0px;
+    
+}
+
+/* Header styles */
+.project-header {
+    
+    position: sticky;
+    top: 100px;
+    background-color: rgba(0, 0, 0, 0);
+    z-index: 20;
+    display: block;
+    padding: 0%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+   
+}
+
+.intro-icons-container{
+
+    padding: 0rem 2rem;
+    padding-top: 2rem;
+}
+
+.project-title, .project-client, .project-subtitle {
+    
+    line-height: 1.3; /* Set a consistent line height */
+}
+
+.project-title {
+    font-size: 1.7rem;
+    margin-bottom: 10px; /* Add spacing */
+    
+}
+
+.project-client {
+    font-size: 1.7rem;
+    margin-bottom: 10px; /* Add spacing */
+    
+}
+
+
+.project-subtitle {
+    font-size: 1rem;
+}
+
+/* Smaller classes that will be applied when scrolling */
+.project-header.shrink {
+    
+    align-items: start;
+    
+    
+}
+
+.project-title.shrink {
+    font-size: 1rem;
+    margin-bottom: 5px; /* Smaller margin when shrunk */
+}
+
+.project-client.shrink {
+    font-size: 1rem;
+    margin-bottom: 5px; /* Smaller margin when shrunk */
+}
+
+.project-subtitle.shrink {
+    font-size: .8rem;
+}
+
+
+
+/* Project type list */
+.project-type-container {
+    
+    margin-bottom: 20px;
+    
+}
+
+.project-type-list {
+    display: flex;
+    list-style: none;
+    
+    gap: 10px;
+    margin-top: 10px;
+    
+}
+
+.project-type-list li {
+    background-color: #090909;
+    padding: 5px 10px;
+    border-radius: .5rem;
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 3rem;
+    
+}
+
+/* Description sections */
+.project-description,
+.project-extended-description {
+    margin-bottom: 30px;
+    line-height: 1.6;
+}
+
+/* Video section */
+.project-video-section {
+    margin-bottom: 40px;
+}
+
+.video-description {
+    margin-bottom: 15px;
+}
+
+.video-container {
+    width: 100%;
+}
+
+.video-wrapper {
+    margin-bottom: 20px;
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    height: 0;
+    overflow: hidden;
+    border-radius: 1rem;
+}
+
+.video-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* Image gallery */
+.project-image-section {
+    margin-bottom: 40px;
+}
+
+.images-description {
+    margin-bottom: 15px;
+}
+
+.image-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.image-figure {
+    margin: 0;
+}
+
+.image-figure img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 1rem;
+}
+
+.image-figure figcaption {
+    margin-top: 8px;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+/* Special image types */
+.image-figure.hero {
+    grid-column: 1 / -1; /* Span full width */
+}
+
+/* Case study section */
+.project-case-study {
+    margin-bottom: 40px;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 1rem;
+}
+
+.project-case-study h3 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+}
+
+.project-case-study h4 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: #444;
+}
+
+.case-study-challenge,
+.case-study-approach,
+.case-study-results {
+    margin-bottom: 20px;
+}
+
+/* Labels section (skills and software) */
+.project-labels-section {
+    display: flex;
+    gap: 10rem;
+    margin-bottom: 40px;
+    background-color: #090909;
+    border-radius: 1rem;
+    
+}
+
+.skills-container,
+.software-container {
+    flex: 1;
+    margin: 100px;
+    color: rgb(143, 143, 143);
+}
+
+.skills-container h3,
+.software-container h3 {
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+}
+
+.skills-list,
+.software-list {
+    padding-left: 20px;
+    line-height: 1.8;
+}
+
+/* Credits section */
+.project-credits {
+    margin-bottom: 30px;
+}
+
+.project-credits h3 {
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+}
+
+.credits-list {
+    padding-left: 20px;
+    line-height: 1.8;
+}
+
+/* Back button */
+.back-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #090909;
+    color: white;
+    text-decoration: none;
+    border-radius: 1rem;
+    margin-top: 20px;
+    transition: background-color 0.3s;
+}
+
+.back-button:hover {
+    background-color: #555;
+}
+
+/* Loading and error states */
+.loading,
+.error-message {
+    text-align: center;
+    padding: 40px;
+    font-size: 1.2rem;
+}
+
+.error-message a {
+    color: #0066cc;
+    text-decoration: underline;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .project-labels-section {
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .image-gallery {
+        grid-template-columns: 1fr;
+    }
+    
+    .project-title {
+        font-size: 2rem;
+    }
+    
+    .project-client {
+        font-size: 1.3rem;
+    }
+}

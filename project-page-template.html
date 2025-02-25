@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Motion Pirate - Project Page</title>
+    <link rel="icon" type="image/x-icon" href="mpFavicon.webp">
+    <link rel="stylesheet" href="./styles/header.css">
+    <link rel="stylesheet" href="./styles/work.css">
+   
+    <link rel="stylesheet" href="./styles/project.css">
+    <link rel="stylesheet" href="./styles/project-page.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk&family=Inter:wght@500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header remains the same -->
+    <header>
+        <a href="/">
+            <div class="logo-container">
+                <img src="./images/icons/MPLogo_Cube_bNw.svg" alt="Motion Pirate Logo" width="40" height="40">
+                <span class="logo-text">motionpirate</span>
+            </div>
+            </a>
+        <button class="mobile-menu-btn">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
+            </svg>
+        </button>
+        <nav>
+            <a href="/">main</a>
+            <a href="/work.html">work</a>
+            <a href="/contact.html">contact</a>
+        </nav>
+    </header>
+    
+    <main>
+        <section class="contact-sections-container">
+            <div class="section-info", class="contact-info">
+
+                <div class="intro-icons-container">
+                    
+                        <img src="./images/icons//iconPencil.png" alt="projects icon">
+                    
+        
+                </div>
+            
+                
+            </div>
+        </section>
+
+        <!-- Project content will be loaded here -->
+        <div id="projectContainer">
+            <!-- Loading indicator -->
+            <div class="loading">Loading project details...</div>
+        </div>
+    </main>
+
+    <script>
+        // Mobile menu functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+            const nav = document.querySelector('nav');
+            
+            mobileMenuBtn.addEventListener('click', () => {
+                nav.classList.toggle('active');
+            });
+
+            // Close menu when clicking outside
+            document.addEventListener('click', (e) => {
+                if (!nav.contains(e.target) && !mobileMenuBtn.contains(e.target)) {
+                    nav.classList.remove('active');
+                }
+            });
+
+            // Close menu when clicking a link
+            nav.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', () => {
+                    nav.classList.remove('active');
+                });
+            });
+        });
+    </script>
+    
+    <!-- Add the project detail script -->
+    <script src="./js/project-detail.js"></script>
+</body>
+</html>

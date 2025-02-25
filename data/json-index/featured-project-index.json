@@ -1,0 +1,26 @@
+{
+    "featuredProjects": [
+      {
+        "id": "animationShowreel",
+        "path": "./data/projects/project-template.json",
+        "additional": "extraText",
+        "order": 1
+      },
+      {
+        "id": "brandCommercial",
+        "path": "./data/projects/project-template.json",
+        "order": 2
+      },
+      {
+        "id": "funstuff",
+        "path": "./data/projects/project-template.json",
+        "additional": "extraText",
+        "order": 3
+      },
+      {
+        "id": "interactive ext",
+        "path": "./data/projects/project-template.json",
+        "order": 4
+      }
+    ]
+  }

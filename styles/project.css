@@ -1,0 +1,72 @@
+/* Project Grid */
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 2rem 0;
+}
+
+.project-card {
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    transition: transform 0.2s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-4px);
+}
+
+.project-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.project-card-content {
+    padding: 1rem;
+}
+
+.project-image {
+    margin: 2rem 0;
+  }
+  
+  
+  .project-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
+  
+  .project-image figcaption {
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+    color: #666;
+  }
+  
+  .hero-image img {
+    width: 100%;
+    max-height: 70vh;
+    object-fit: cover;
+  }
+  
+  .stills-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin: 2rem 0;
+  }
+  
+  .skill-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+  
+  .skill-tag {
+    padding: 0.25rem 0.75rem;
+    background: #f0f0f0;
+    border-radius: 999px;
+    font-size: 0.9rem;
+  }

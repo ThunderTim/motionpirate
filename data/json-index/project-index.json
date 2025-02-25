@@ -1,0 +1,24 @@
+{
+    "projects": [
+      {
+        "id": "project-template",
+        "path": "./data/projects/project-template.json",
+        "featured": false
+      },
+      {
+        "id": "venafipromo",
+        "path": "./data/projects/project-venafi.json",
+        "featured": false
+      },
+      {
+        "id": "product-explainer",
+        "path": "./data/projects/project-template.json",
+        "featured": false
+      },
+      {
+        "id": "motion-graphics",
+        "path": "./data/projects/project-template.json",
+        "featured": true
+      }
+    ]
+  }
