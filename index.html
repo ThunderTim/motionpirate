@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Motion Pirate - Portfolio</title>
     <link rel="icon" type="image/x-icon" href="mpFavicon.webp">
     <link rel="stylesheet" href="./styles/header.css">
@@ -16,15 +16,16 @@
 <body>
     <header>
         <div class="logo-container" class="inverted">
-            <img src="./images/icons/MPLogo_Cube_bNw.svg" alt="Motion Pirate Logo" width="40" height="40">
-            <span class="logo-text">motionpirate</span>
+          <img src="./images/icons/MPLogo_Cube_bNw.svg" alt="Motion Pirate Logo" width="40" height="40">
+          <span class="logo-text">motionpirate</span>
         </div>
-        <nav \>
-            <a href="/">main</a>
-         <a href="work.html">work</a>
-            <a href="contact.html">contact</a>
+        <nav>
+          <a href="/">main</a>
+          <a href="work.html">work</a>
+          <a href="contact.html">contact</a>
         </nav>
-    </header>
+        <button class="mobile-menu-btn">☰</button>
+      </header>
     
     <div class="hero-section">
         <div class="video-container">
@@ -33,7 +34,10 @@
                 title="vimeo-player" 
                 src="https://player.vimeo.com/video/1059819713?h=029b8f310a&background=1&autoplay=1&loop=1&byline=0&title=0&muted=1&playsinline=1" 
                 frameborder="0"    
-                allow="autoplay; fullscreen"
+                allow="autoplay; fullscreen; picture-in-picture"
+                playsinline
+                webkit-playsinline
+                muted
                 allowfullscreen>
             </iframe>
 
@@ -233,19 +237,31 @@
         // even if there are issues with Vimeo or WebSocket connections
         const forceFadeTimeout = setTimeout(forcePreloaderFadeOut, 8000);
     
-        // Normal fade out function
         function fadeOutPreloader() {
-            console.log("Starting normal fade out sequence");
+            console.log("Starting fade out sequence");
+            const preloader = document.querySelector('.preloader-image');
+            
             if (preloader) {
+                // Force hardware acceleration for smoother animation
+                preloader.style.transform = 'translate3d(0,0,0)';
                 preloader.style.opacity = '0';
                 
                 setTimeout(() => {
                     preloader.style.display = 'none';
-                    console.log("Preloader removed normally");
+                    console.log("Preloader removed");
                     
-                    // Clear the force fade timeout since we've handled it normally
+                    // Clear the force fade timeout
                     clearTimeout(forceFadeTimeout);
-                }, 1500);
+                    
+                    // Optimize page after preloader is gone
+                    setTimeout(() => {
+                        // Remove unused elements to free memory
+                        if (!window.preloaderRemoved) {
+                            window.preloaderRemoved = true;
+                            preloader.parentNode.removeChild(preloader);
+                        }
+                    }, 1000);
+                }, 1000);
             }
         }
     
@@ -371,6 +387,41 @@
         loadCompanyLogos();
     });
     </script>
+    <script>
+        // Mobile Menu Toggle
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+            const nav = document.querySelector('nav');
+            
+            if (mobileMenuBtn && nav) {
+                mobileMenuBtn.addEventListener('click', function() {
+                    nav.classList.toggle('active');
+                });
+                
+                // Close menu when clicking outside
+                document.addEventListener('click', function(event) {
+                    if (!nav.contains(event.target) && !mobileMenuBtn.contains(event.target) && nav.classList.contains('active')) {
+                        nav.classList.remove('active');
+                    }
+                });
+            }
+            
+            // Optimize Vimeo player for mobile
+            const player = new Vimeo.Player(document.getElementById('vimeo-player'));
+            const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+            
+            if (player && isMobile) {
+                player.on('loaded', function() {
+                    player.setQuality('540p'); // Lower quality for mobile
+                });
+                
+                // Handle Safari page transitions
+                window.addEventListener('pagehide', function() {
+                    player.pause();
+                });
+            }
+        });
+        </script>
     
 
 </body>
