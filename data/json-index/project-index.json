@@ -1,24 +1,46 @@
 {
     "projects": [
       {
-        "id": "project-template",
-        "path": "./data/projects/project-template.json",
+        "id": "Domo-DataLifeCycle",
+        "path": "./data/projects/project-domo-dataLifeCycle.json",
         "featured": false
       },
       {
-        "id": "venafipromo",
-        "path": "./data/projects/project-venafi.json",
+        "id": "ria-reflex",
+        "path": "./data/projects/project-ria-reflex.json",
         "featured": false
       },
       {
-        "id": "product-explainer",
-        "path": "./data/projects/project-template.json",
+        "id": "LoffmanAnimation",
+        "path": "./data/projects/project-loffman.json",
         "featured": false
       },
       {
-        "id": "motion-graphics",
-        "path": "./data/projects/project-template.json",
+        "id": "OakFlatsAnimation",
+        "path": "./data/projects/project-oakflats.json",
+        "featured": false
+      },
+      {
+        "id": "5currentsLogo",
+        "path": "./data/projects/project-5cLogo.json",
         "featured": true
+      },
+      {
+        "id": "Domo-MellorCode",
+        "path": "./data/projects/project-domo-mellorCodeVisuals.json",
+        "featured": true
+      },
+      {
+        "id": "fh-dnd",
+        "path": "./data/projects/project-futureHouse-DandD.json",
+        "featured": false
+      },
+      {
+        "id": "fh-venafi",
+        "path": "./data/projects/project-futureHouse-venafi.json",
+        "featured": false
       }
     ]
   }
+
+  

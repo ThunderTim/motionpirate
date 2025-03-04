@@ -1,0 +1,369 @@
+{
+  "id": "Domo-DataLifeCycle",
+  "title": "Data Life Cycle",
+  "subtitle": "subtitle",
+  "client": "Domo",
+  "projectType": [
+      "design",
+      "concept design",
+      "look development",
+      "character design",
+      "3d Modeling",
+      "animation",
+      "motion design"
+  ],
+  "description": "Tasked with exploring the data journey, I wanted to follow both the literat and the abstract.  In initial design the client requested the development of a robot type of mascot, I explored a few looks that could help humanize some of the abstract processes of data managment.",
+  "extendedsDescription":"As the project progressed the concepts skewed more abstract and using inspiration from mathmatical/machine diagrams.",
+  "videosDescription":" ",
+  "videos": [
+    {
+        "platform": "vimeo",
+        "id": "1062106763",
+        "type": "main",
+        "aspectRatio":"",
+        "options": {
+            "autoplay": false,
+            "loop": true,
+            "title": false,
+            "byline": false,
+            "portrait": false,
+            "color": "ff9933"
+        }
+    },
+
+      {
+          "platform": "vimeo",
+          "id": "1062107154",
+          "type": "main",
+          "aspectRatio":"16:9",
+          "options": {
+              "autoplay": false,
+              "loop": true,
+              "title": false,
+              "byline": false,
+              "portrait": false,
+              "color": "ff9933"
+          }
+      }, 
+
+      {
+          "platform": "vimeo",
+          "id": "1062107184",
+          "type": "",
+          "options": {
+              "autoplay": false,
+              "loop": true,
+              "title": false,
+              "byline": false,
+              "portrait": false,
+              "color": "ff9933"
+          }
+      },
+      {
+          "platform": "vimeo",
+          "id": "1062107207",
+          "type": "",
+          "options": {
+              "autoplay": false,
+              "loop": true,
+              "title": false,
+              "byline": false,
+              "portrait": false,
+              "color": "ff9933"
+          }
+      },
+      {
+          "platform": "vimeo",
+          "id": "1061914824",
+          "type": "",
+          "options": {
+              "autoplay": false,
+              "loop": true,
+              "title": false,
+              "byline": false,
+              "portrait": false,
+              "color": "ff9933"
+          }
+      },
+      {
+          "platform": "vimeo",
+          "id": "1061914857",
+          "type": "",
+          "options": {
+              "autoplay": false,
+              "loop": true,
+              "title": false,
+              "byline": false,
+              "portrait": false,
+              "color": "ff9933"
+          }
+      },
+      {
+          "platform": "vimeo",
+          "id": "1061914885",
+          "type": "",
+          "options": {
+              "autoplay": false,
+              "loop": true,
+              "title": false,
+              "byline": false,
+              "portrait": false,
+              "color": "ff9933"
+          }
+      },
+      {
+          "platform": "vimeo",
+          "id": "1061914944",
+          "type": "",
+          "options": {
+              "autoplay": false,
+              "loop": true,
+              "title": false,
+              "byline": false,
+              "portrait": false,
+              "color": "ff9933"
+          }
+      },
+      {
+          "platform": "vimeo",
+          "id": "1061914979",
+          "type": "",
+          "options": {
+              "autoplay": false,
+              "loop": true,
+              "title": false,
+              "byline": false,
+              "portrait": false,
+              "color": "ff9933"
+          }
+      }
+      
+],
+  "imagesDescription":"",
+
+  "images": [
+     
+        
+      {
+        "url": "./images/projects/domo-robots/domoRoboData_003_.jpg",
+          "alt": "Animation Still 1",
+          "type": "hero",
+          "caption": ""
+      },
+     
+      
+      {
+        "url": "./images/projects/domo-robots/domoRoboData_006_.jpg",
+          "alt": "Animation Still 1",
+          "type": "looks",
+          "caption": ""
+      },
+      {
+        "url": "./images/projects/domo-robots/domoRoboData_007_.jpg",
+          "alt": "Animation Still 1",
+          "type": "looks",
+          "caption": ""
+      },
+      {
+        "url": "./images/projects/domo-robots/domoRoboData_008_.jpg",
+          "alt": "Animation Still 1",
+          "type": "looks",
+          "caption": ""
+      },
+      {
+        "url": "./images/projects/domo-robots/domoRoboData_009_.jpg",
+          "alt": "Animation Still 1",
+          "type": "looks",
+          "caption": ""
+      },
+      
+      {
+        "url": "./images/projects/domo-robots/domoRoboData_010_.jpg",
+          "alt": "Animation Still 1",
+          "type": "looks",
+          "caption": ""
+      },
+      {
+        "url": "./images/projects/domo-robots/domoRoboData_011_.jpg",
+          "alt": "Animation Still 1",
+          "type": "looks",
+          "caption": ""
+      },
+     
+      
+      {
+        "url": "./images/projects/domo-robots/domoRoboData_014_.jpg",
+          "alt": "Animation Still 1",
+          "type": "looks",
+          "caption": ""
+      },
+      {
+        "url": "./images/projects/domo-robots/domoRoboData_017_.jpg",
+          "alt": "Animation Still 1",
+          "type": "looks",
+          "caption": ""
+      },
+     
+     
+      {
+        "url": "./images/projects/domo-robots/domoRoboData_000_.jpg",
+        "alt": "Animation Still 1",
+        "type": "still",
+        "caption": ""
+    },
+  {
+    "url": "./images/projects/domo-robots/domoRoboData_001_.jpg",
+      "alt": "Look Development Hero Shot",
+      "type": "still",
+      "caption": ""
+  },
+  {
+    "url": "./images/projects/domo-robots/domoRoboData_002_.jpg",
+      "alt": "Design Process Shot 1",
+      "type": "design",
+      "caption": ""
+  },
+      
+      {
+        "url": "./images/projects/domo-robots/domoRoboData_013_.jpg",
+          "alt": "Animation Still 1",
+          "type": "looks",
+          "caption": ""
+      },
+      {
+        "url": "./images/projects/domo-robots/domoRoboData_005_.jpg",
+          "alt": "Animation Still 1",
+          "type": "looks",
+          "caption": ""
+      },
+      {
+        "url": "./images/projects/domo-robots/domoRoboData_015_.jpg",
+          "alt": "Animation Still 1",
+          "type": "looks",
+          "caption": ""
+      },
+      {
+        "url": "./images/projects/domo-robots/domoRoboData_016_.jpg",
+          "alt": "Animation Still 1",
+          "type": "looks",
+          "caption": ""
+      },
+      
+      {
+        "url": "./images/projects/domo-robots/domoRoboData_018_.jpg",
+          "alt": "Animation Still 1",
+          "type": "looks",
+          "caption": ""
+      },
+      {
+        "url": "./images/projects/domo-robots/domoRoboData_019_.jpg",
+          "alt": "Animation Still 1",
+          "type": "looks",
+          "caption": ""
+      },
+      {
+        "url": "./images/projects/domo-robots/domoRoboData_020_.jpg",
+          "alt": "Animation Still 1",
+          "type": "looks",
+          "caption": ""
+      },
+      {
+        "url": "./images/projects/domo-robots/domoRoboData_021_.jpg",
+          "alt": "Animation Still 1",
+          "type": "looks",
+          "caption": ""
+      },
+      
+      {
+        "url": "./images/projects/domo-robots/domoRoboData_023_.jpg",
+          "alt": "Animation Still 1",
+          "type": "looks",
+          "caption": ""
+      },
+      {
+        "url": "./images/projects/domo-robots/domoRoboData_024_.jpg",
+          "alt": "Animation Still 1",
+          "type": "looks",
+          "caption": ""
+      },
+      {
+        "url": "./images/projects/domo-robots/domoRoboData_025_.jpg",
+          "alt": "Animation Still 1",
+          "type": "looks",
+          "caption": ""
+      },
+      {
+        "url": "./images/projects/domo-robots/domoRoboData_026_.jpg",
+          "alt": "Animation Still 1",
+          "type": "looks",
+          "caption": ""
+      },
+      {
+        "url": "./images/projects/domo-robots/domoRoboData_027_.jpg",
+          "alt": "Animation Still 1",
+          "type": "looks",
+          "caption": ""
+      },
+      {
+        "url": "./images/projects/domo-robots/domoRoboData_028_.jpg",
+          "alt": "Animation Still 1",
+          "type": "looks",
+          "caption": ""
+      },
+      {
+        "url": "./images/projects/domo-robots/domoRoboData_029_.jpg",
+          "alt": "Animation Still 1",
+          "type": "looks",
+          "caption": ""
+      },
+      {
+        "url": "./images/projects/domo-robots/domoRoboData_030_.jpg",
+          "alt": "Animation Still 1",
+          "type": "looks",
+          "caption": ""
+      },
+      {
+        "url": "./images/projects/domo-robots/domoRoboData_031_.jpg",
+          "alt": "Animation Still 1",
+          "type": "looks",
+          "caption": ""
+      },
+      {
+        "url": "./images/projects/domo-robots/domoRoboData_032_.jpg",
+          "alt": "Animation Still 1",
+          "type": "looks",
+          "caption": ""
+      },
+      {
+        "url": "./images/projects/domo-robots/domoRoboData_033_.jpg",
+          "alt": "Animation Still 1",
+          "type": "looks",
+          "caption": ""
+      }
+     
+   
+  ],
+  "skillLabels": [
+      "motion-design",
+      "Look Development",
+      "boards",
+      "documentary",
+      "Data Visualization"
+  ],
+  "softwareLabels": [
+      "after-effects",
+      "cinema-4d",
+      "photoshop",
+      "Adobe Illustrator"
+  ],
+  "casestudy": {
+    "challenge": "",
+    "approach": "",
+    "results": ""
+  },
+
+  "credits": {
+    "credit1": "",
+    "credit2": ""
+  }
+}

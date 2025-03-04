@@ -1,0 +1,275 @@
+ {
+  "id": "fh-dnd",
+  "title": "Dungeons & Dragons",
+  "subtitle": "Bringing a new chapter to interactive.",
+  "client": "Future House studios // Dungeons & Dragons - Hasbro, Wizards of the Coast",
+  "projectType": [
+      "design",
+      "3d modeling",
+      "look development",
+      "sculpting",
+      "texturing",
+      "animation",
+      "motion design",
+      "Game Trailers"
+  ],
+  "description": "Bringing to life parts of the D&D Universe",
+  "extendedsDescription":"",
+  "videosDescription":" ",
+  "videos": [
+      {
+          "platform": "vimeo",
+          "id": "903765343",
+          "type": "main",
+          "aspectRatio": "16:9",
+          "description":"",
+          "options": {
+              "autoplay": false,
+              "loop": true,
+              "title": false,
+              "byline": false,
+              "portrait": false,
+              "color": "ff9933"
+          }
+      },
+      {
+        "platform": "vimeo",
+        "id": "1062264085",
+        "type": "main",
+        "aspectRatio": "16:9",
+        "description":"",
+        "options": {
+            "autoplay": false,
+            "loop": true,
+            "title": false,
+            "byline": false,
+            "portrait": false,
+            "color": "ff9933"
+        }
+    },
+    {
+        "platform": "vimeo",
+        "id": "1062264111",
+        "type": "main",
+        "aspectRatio": "16:9",
+        "description":"",
+        "options": {
+            "autoplay": false,
+            "loop": true,
+            "title": false,
+            "byline": false,
+            "portrait": false,
+            "color": "ff9933"
+        }
+    },
+
+    {
+        "platform": "vimeo",
+        "id": "1062263526",
+        "type": "main",
+        "aspectRatio": "16:9",
+        "description":"",
+        "options": {
+            "autoplay": false,
+            "loop": true,
+            "title": false,
+            "byline": false,
+            "portrait": false,
+            "color": "ff9933"
+        }
+    },
+
+    {
+        "platform": "vimeo",
+        "id": "1062263013",
+        "type": "main",
+        "aspectRatio": "16:9",
+        "description":"",
+        "options": {
+            "autoplay": false,
+            "loop": true,
+            "title": false,
+            "byline": false,
+            "portrait": false,
+            "color": "ff9933"
+        }
+    },
+
+    {
+        "platform": "vimeo",
+        "id": "1062262994",
+        "type": "main",
+        "aspectRatio": "16:9",
+        "description":"",
+        "options": {
+            "autoplay": false,
+            "loop": true,
+            "title": false,
+            "byline": false,
+            "portrait": false,
+            "color": "ff9933"
+        }
+    }
+
+
+        
+        
+  ],
+  "imagesDescription":"",
+
+  "images": [
+        {
+            "url": "./images/projects/fh-dnd/fh_dnd_001_.jpg",
+            "alt": "Animation Still 1",
+            "type": "hero",
+            "caption": ""
+        },
+        {
+            "url": "./images/projects/fh-dnd/fh_dnd_000_.jpg",
+            "alt": "Animation Still 1",
+            "type": "still",
+            "caption": ""
+        },
+        {
+            "url": "./images/projects/fh-dnd/fh_dnd_002_.jpg",
+            "alt": "Animation Still 1",
+            "type": "still",
+            "caption": ""
+        },
+        {
+            "url": "./images/projects/fh-dnd/fh_dnd_003_.jpg",
+            "alt": "Animation Still 1",
+            "type": "still",
+            "caption": ""
+        },
+        {
+            "url": "./images/projects/fh-dnd/fh_dnd_004_.jpg",
+            "alt": "Animation Still 1",
+            "type": "still",
+            "caption": ""
+        },
+        {
+            "url": "./images/projects/fh-dnd/fh_dnd_005_.jpg",
+            "alt": "Animation Still 1",
+            "type": "still",
+            "caption": ""
+        },
+        {
+            "url": "./images/projects/fh-dnd/fh_dnd_006_.jpg",
+            "alt": "Animation Still 1",
+            "type": "still",
+            "caption": ""
+        },
+        {
+            "url": "./images/projects/fh-dnd/fh_dnd_007_.jpg",
+            "alt": "Animation Still 1",
+            "type": "still",
+            "caption": ""
+        },
+        {
+            "url": "./images/projects/fh-dnd/fh_dnd_008_.jpg",
+            "alt": "Animation Still 1",
+            "type": "still",
+            "caption": ""
+        },
+        {
+            "url": "./images/projects/fh-dnd/fh_dnd_009_.jpg",
+            "alt": "Animation Still 1",
+            "type": "still",
+            "caption": ""
+        },
+        {
+            "url": "./images/projects/fh-dnd/fh_dnd_010_.jpg",
+            "alt": "Animation Still 1",
+            "type": "still",
+            "caption": ""
+        },
+        {
+            "url": "./images/projects/fh-dnd/fh_dnd_011_.jpg",
+            "alt": "Animation Still 1",
+            "type": "still",
+            "caption": ""
+        },
+        {
+            "url": "./images/projects/fh-dnd/fh_dnd_012_.jpg",
+            "alt": "Animation Still 1",
+            "type": "still",
+            "caption": ""
+        },
+        {
+            "url": "./images/projects/fh-dnd/fh_dnd_013_.jpg",
+            "alt": "Animation Still 1",
+            "type": "still",
+            "caption": ""
+        },
+        {
+            "url": "./images/projects/fh-dnd/fh_dnd_014_.jpg",
+            "alt": "Animation Still 1",
+            "type": "still",
+            "caption": ""
+        },
+        {
+            "url": "./images/projects/fh-dnd/fh_dnd_015_.jpg",
+            "alt": "Animation Still 1",
+            "type": "still",
+            "caption": ""
+        },
+        {
+            "url": "./images/projects/fh-dnd/fh_dnd_016_.jpg",
+            "alt": "Animation Still 1",
+            "type": "still",
+            "caption": ""
+        },
+        {
+            "url": "./images/projects/fh-dnd/fh_dnd_017_.jpg",
+            "alt": "Animation Still 1",
+            "type": "still",
+            "caption": ""
+        },
+        {
+            "url": "./images/projects/fh-dnd/fh_dnd_018_.jpg",
+            "alt": "Animation Still 1",
+            "type": "still",
+            "caption": ""
+        },
+        {
+            "url": "./images/projects/fh-dnd/fh_dnd_019_.jpg",
+            "alt": "Animation Still 1",
+            "type": "still",
+            "caption": ""
+        },
+        {
+            "url": "./images/projects/fh-dnd/fh_dnd_020_.jpg",
+            "alt": "Animation Still 1",
+            "type": "still",
+            "caption": ""
+        }
+        
+      
+      
+   
+  ],
+  "skillLabels": [
+      "motion-design",
+      "Look Development",
+      "boards",
+      "documentary",
+      "Data Visualization"
+  ],
+  "softwareLabels": [
+      "after-effects",
+      "cinema-4d",
+      "photoshop",
+      "Adobe Illustrator"
+  ],
+  "casestudy": {
+    "challenge": "",
+    "approach": "",
+    "results": ""
+  },
+
+  "credits": {
+    "credit1": "",
+    "credit2": ""
+  }
+}

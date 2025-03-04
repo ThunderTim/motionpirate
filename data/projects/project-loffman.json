@@ -1,0 +1,132 @@
+{
+  "id": "LoffmanAnimation",
+  "title": "Look Development and Animation",
+  "subtitle": "",
+  "client": "",
+  "projectType": [
+      "design",
+      "look development",
+      "animation",
+      "motion design"
+  ],
+  "description": "",
+  "extendedsDescription":"",
+  "videosDescription":" ",
+  "videos": [
+      {
+          "platform": "vimeo",
+          "id": "1061892452",
+          "type": "main",
+          "options": {
+              "autoplay": false,
+              "loop": true,
+              "title": false,
+              "byline": false,
+              "portrait": false,
+              "color": "ff9933"
+          }
+      },
+
+        {
+            "platform": "vimeo",
+            "id": "1061892538",
+            "type": "",
+            "options": {
+                "autoplay": false,
+                "loop": true,
+                "title": false,
+                "byline": false,
+                "portrait": false,
+                "color": "ff9933"
+            }
+        },
+        {
+            "platform": "vimeo",
+            "id": "1061892717",
+            "type": "",
+            "options": {
+                "autoplay": false,
+                "loop": true,
+                "title": false,
+                "byline": false,
+                "portrait": false,
+                "color": "ff9933"
+            }
+        }
+  ],
+  "imagesDescription":"",
+
+  "images": [
+      {
+          "url": "./images/projects/loffman/Loffman_LookDev_001_.jpg",
+          "alt": "Look Development Hero Shot",
+          "type": "hero",
+          "caption": ""
+      },
+      {
+          "url":"./images/projects/loffman/Loffman_LookDev_002_.jpg",
+          "alt": "Design Process Shot 1",
+          "type": "design",
+          "caption": ""
+      },
+      {
+          "url": "./images/projects/loffman/Loffman_LookDev_003_.jpg",
+          "alt": "Animation Still 1",
+          "type": "looks",
+          "caption": ""
+      },
+      {
+        "url": "./images/projects/loffman/Loffman_LookDev_004_.jpg",
+        "alt": "Design Process Shot 1",
+        "type": "design",
+        "caption": ""
+    },
+    {
+        "url": "./images/projects/loffman/Loffman_LookDev_005_.jpg",
+        "alt": "Animation Still 1",
+        "type": "looks",
+        "caption": ""
+    },{
+        "url":"./images/projects/loffman/Loffman_LookDev_006_.jpg",
+        "alt": "Design Process Shot 1",
+        "type": "design",
+        "caption": ""
+    },
+    {
+        "url": "./images/projects/loffman/Loffman_LookDev_007_.jpg",
+        "alt": "Animation Still 1",
+        "type": "looks",
+        "caption": ""
+    },
+    {
+        "url":"./images/projects/loffman/Loffman_LookDev_008_.jpg",
+        "alt": "Design Process Shot 1",
+        "type": "design",
+        "caption": ""
+    }
+   
+  ],
+  "skillLabels": [
+      "motion-design",
+      "Look Development",
+      "boards",
+      "documentary",
+      "Data Visualization"
+  ],
+  "softwareLabels": [
+      "after-effects",
+      "cinema-4d",
+      "photoshop",
+      "Adobe Illustrator"
+  ],
+  "casestudy": {
+    "challenge": "",
+    "approach": "",
+    "results": ""
+  },
+
+  "credits": {
+    "credit1": "",
+    "credit2": ""
+  }
+}

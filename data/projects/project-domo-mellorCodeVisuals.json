@@ -1,0 +1,222 @@
+ {
+  "id": "Domo-MellorCode",
+  "title": "Domopalooza Screen Content",
+  "subtitle": "For physical and Digital screens",
+  "client": "Domo",
+  "projectType": [
+      "design",
+      "concept design",
+      "look development",
+      "character design",
+      "3d Modeling",
+      "animation",
+      "dynamic content",
+      "Procedural Animation",
+      "motion design"
+  ],
+  "description": "Stage Visuals for the big event.  These visuals needed to communicate the tone.  This year was different with a large part of the convention moving to 'Virtual spaces'.  Visual content needed to look great accorss multiple distribution points.",
+  "extendedsDescription":"",
+  "videosDescription":" ",
+  "videos": [
+      {
+          "platform": "vimeo",
+          "id": "1062132879",
+          "type": "main",
+          "aspectRatio": "7:4",
+          "description":"Exploring the code space with procedural animation setups.",
+          "options": {
+              "autoplay": false,
+              "loop": true,
+              "title": false,
+              "byline": false,
+              "portrait": false,
+              "color": "ff9933"
+          }
+      },
+
+        {
+            "platform": "vimeo",
+            "id": "1062132799",
+            "type": "main",
+            "aspectRatio": "7:4",
+            "options": {
+                "autoplay": false,
+                "loop": true,
+                "title": false,
+                "byline": false,
+                "portrait": false,
+                "color": "ff9933"
+            }
+        }, 
+
+        {
+            "platform": "vimeo",
+            "id": "1062132563",
+            "type": "secondary",
+            "aspectRatio": "7:4",
+            "options": {
+                "autoplay": false,
+                "loop": true,
+                "title": false,
+                "byline": false,
+                "portrait": false,
+                "color": "ff9933"
+            }
+        },
+        {
+            "platform": "vimeo",
+            "id": "1062132600",
+            "type": "",
+            "aspectRatio": "7:4",
+            "options": {
+                "autoplay": false,
+                "loop": true,
+                "title": false,
+                "byline": false,
+                "portrait": false,
+                "color": "ff9933"
+            }
+        },
+        {
+            "platform": "vimeo",
+            "id": "1062131864",
+            "type": "",
+            "options": {
+                "autoplay": false,
+                "loop": true,
+                "title": false,
+                "byline": false,
+                "portrait": false,
+                "color": "ff9933"
+            }
+        },
+        {
+            "platform": "vimeo",
+            "id": "1062131815",
+            "type": "",
+            "options": {
+                "autoplay": false,
+                "loop": true,
+                "title": false,
+                "byline": false,
+                "portrait": false,
+                "color": "ff9933"
+            }
+        },
+        {
+            "platform": "vimeo",
+            "id": "1062132766",
+            "type": "",
+            "aspectRatio": "7:4",
+            "options": {
+                "autoplay": false,
+                "loop": true,
+                "title": false,
+                "byline": false,
+                "portrait": false,
+                "color": "ff9933"
+            }
+        },
+        {
+            "platform": "vimeo",
+            "id": "1062131424",
+            "type": "",
+            "options": {
+                "autoplay": false,
+                "loop": true,
+                "title": false,
+                "byline": false,
+                "portrait": false,
+                "color": "ff9933"
+            }
+        },
+        {
+            "platform": "vimeo",
+            "id": "1062131480",
+            "type": "",
+            "options": {
+                "autoplay": false,
+                "loop": true,
+                "title": false,
+                "byline": false,
+                "portrait": false,
+                "color": "ff9933"
+            }
+        },
+        {
+            "platform": "vimeo",
+            "id": "1062131494",
+            "type": "",
+            "options": {
+                "autoplay": false,
+                "loop": true,
+                "title": false,
+                "byline": false,
+                "portrait": false,
+                "color": "ff9933"
+            }
+        },
+        {
+            "platform": "vimeo",
+            "id": "1062131521",
+            "type": "",
+            "options": {
+                "autoplay": false,
+                "loop": true,
+                "title": false,
+                "byline": false,
+                "portrait": false,
+                "color": "ff9933"
+            }
+        },
+        {
+            "platform": "vimeo",
+            "id": "1062131449",
+            "type": "",
+            "options": {
+                "autoplay": false,
+                "loop": true,
+                "title": false,
+                "byline": false,
+                "portrait": false,
+                "color": "ff9933"
+            }
+        }
+        
+  ],
+  "imagesDescription":"",
+
+  "images": [
+        {
+            "url": "./images/projects/domo-mellor/domo-code-loop).jpg",
+            "alt": "Animation Still 1",
+            "type": "hero",
+            "caption": ""
+        }
+      
+   
+  ],
+  "skillLabels": [
+      "motion-design",
+      "Look Development",
+      "boards",
+      "documentary",
+      "Data Visualization"
+  ],
+  "softwareLabels": [
+      "after-effects",
+      "cinema-4d",
+      "photoshop",
+      "Adobe Illustrator"
+  ],
+  "casestudy": {
+    "challenge": "",
+    "approach": "",
+    "results": ""
+  },
+
+  "credits": {
+    "credit1": "",
+    "credit2": ""
+  }
+}

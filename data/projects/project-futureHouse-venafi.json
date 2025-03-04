@@ -1,0 +1,252 @@
+ {
+  "id": "fh-venafi",
+  "title": "Venafi",
+  "subtitle": "Logo Animation",
+  "client": "Future House studios // Venafi",
+  "projectType": [
+      "design",
+      "3d modeling",
+      "look development",
+      "sculpting",
+      "texturing",
+      "animation",
+      "motion design",
+      "Sound Design",
+      "producer"
+  ],
+  "description": "Epic, mystery, tech inspired",
+  "extendedsDescription":"",
+  "videosDescription":" ",
+  "videos": [
+      {
+          "platform": "vimeo",
+          "id": "903767543",
+          "type": "main",
+          "aspectRatio": "16:9",
+          "description":"",
+          "options": {
+              "autoplay": false,
+              "loop": true,
+              "title": false,
+              "byline": false,
+              "portrait": false,
+              "color": "ff9933"
+          }
+      },
+      {
+        "platform": "vimeo",
+        "id": "1062269279",
+        "type": "main",
+        "aspectRatio": "16:9",
+        "description":"",
+        "options": {
+            "autoplay": false,
+            "loop": true,
+            "title": false,
+            "byline": false,
+            "portrait": false,
+            "color": "ff9933"
+        }
+    }
+      
+
+
+        
+        
+  ],
+  "imagesDescription":"",
+
+  "images": [
+       
+        {
+            "url": "./images/projects/venafi/fh_venafi_001_.jpg",
+            "alt": "Animation Still 1",
+            "type": "hero",
+            "caption": ""
+        },
+        {
+            "url": "./images/projects/venafi/fh_venafi_002_.jpg",
+            "alt": "Animation Still 1",
+            "type": "still",
+            "caption": ""
+        },
+        {
+            "url": "./images/projects/venafi/fh_venafi_003_.jpg",
+            "alt": "Animation Still 1",
+            "type": "still",
+            "caption": ""
+        },
+        {
+            "url": "./images/projects/venafi/fh_venafi_004_.jpg",
+            "alt": "Animation Still 1",
+            "type": "still",
+            "caption": ""
+        },
+        {
+            "url": "./images/projects/venafi/fh_venafi_005_.jpg",
+            "alt": "Animation Still 1",
+            "type": "still",
+            "caption": ""
+        },
+        {
+            "url": "./images/projects/venafi/fh_venafi_006_.jpg",
+            "alt": "Animation Still 1",
+            "type": "still",
+            "caption": ""
+        },
+        {
+            "url": "./images/projects/venafi/fh_venafi_007_.jpg",
+            "alt": "Animation Still 1",
+            "type": "still",
+            "caption": ""
+        },
+        {
+            "url": "./images/projects/venafi/fh_venafi_008_.jpg",
+            "alt": "Animation Still 1",
+            "type": "still",
+            "caption": ""
+        },
+        {
+            "url": "./images/projects/venafi/fh_venafi_009_.jpg",
+            "alt": "Animation Still 1",
+            "type": "still",
+            "caption": ""
+        },
+        {
+            "url": "./images/projects/venafi/fh_venafi_010_.jpg",
+            "alt": "Animation Still 1",
+            "type": "still",
+            "caption": ""
+        },
+        {
+            "url": "./images/projects/venafi/fh_venafi_011_.jpg",
+            "alt": "Animation Still 1",
+            "type": "still",
+            "caption": ""
+        },
+        {
+            "url": "./images/projects/venafi/fh_venafi_012_.jpg",
+            "alt": "Animation Still 1",
+            "type": "still",
+            "caption": ""
+        },
+        {
+            "url": "./images/projects/venafi/fh_venafi_013_.jpg",
+            "alt": "Animation Still 1",
+            "type": "still",
+            "caption": ""
+        },
+        {
+            "url": "./images/projects/venafi/fh_venafi_014_.jpg",
+            "alt": "Animation Still 1",
+            "type": "still",
+            "caption": ""
+        },
+        {
+            "url": "./images/projects/venafi/fh_venafi_015_.jpg",
+            "alt": "Animation Still 1",
+            "type": "still",
+            "caption": ""
+        },
+        {
+            "url": "./images/projects/venafi/fh_venafi_016_.jpg",
+            "alt": "Animation Still 1",
+            "type": "still",
+            "caption": ""
+        },
+        {
+            "url": "./images/projects/venafi/fh_venafi_017_.jpg",
+            "alt": "Animation Still 1",
+            "type": "still",
+            "caption": ""
+        },
+        {
+            "url": "./images/projects/venafi/fh_venafi_018_.jpg",
+            "alt": "Animation Still 1",
+            "type": "still",
+            "caption": ""
+        },
+        {
+            "url": "./images/projects/venafi/fh_venafi_019_.jpg",
+            "alt": "Animation Still 1",
+            "type": "still",
+            "caption": ""
+        },
+        {
+            "url": "./images/projects/venafi/fh_venafi_020_.jpg",
+            "alt": "Animation Still 1",
+            "type": "still",
+            "caption": ""
+        },
+        {
+            "url": "./images/projects/venafi/fh_venafi_021_.jpg",
+            "alt": "Animation Still 1",
+            "type": "still",
+            "caption": ""
+        },
+        {
+            "url": "./images/projects/venafi/fh_venafi_022_.jpg",
+            "alt": "Animation Still 1",
+            "type": "still",
+            "caption": ""
+        },
+        {
+            "url": "./images/projects/venafi/fh_venafi_023_.jpg",
+            "alt": "Animation Still 1",
+            "type": "still",
+            "caption": ""
+        },
+        {
+            "url": "./images/projects/venafi/fh_venafi_024_.jpg",
+            "alt": "Animation Still 1",
+            "type": "still",
+            "caption": ""
+        },
+        {
+            "url": "./images/projects/venafi/fh_venafi_025_.jpg",
+            "alt": "Animation Still 1",
+            "type": "still",
+            "caption": ""
+        },
+        {
+            "url": "./images/projects/venafi/fh_venafi_026_.jpg",
+            "alt": "Animation Still 1",
+            "type": "still",
+            "caption": ""
+        },
+        {
+            "url": "./images/projects/venafi/fh_venafi_027_.jpg",
+            "alt": "Animation Still 1",
+            "type": "still",
+            "caption": ""
+        }
+
+        
+      
+      
+   
+  ],
+  "skillLabels": [
+      "motion-design",
+      "Look Development",
+      "boards",
+      "documentary",
+      "Data Visualization"
+  ],
+  "softwareLabels": [
+      "after-effects",
+      "cinema-4d",
+      "photoshop",
+      "Adobe Illustrator"
+  ],
+  "casestudy": {
+    "challenge": "",
+    "approach": "",
+    "results": ""
+  },
+
+  "credits": {
+    "credit1": "",
+    "credit2": ""
+  }
+}

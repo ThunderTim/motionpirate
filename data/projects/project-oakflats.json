@@ -1,0 +1,134 @@
+{
+  "id": "OakFlatsAnimation",
+  "title": "Look Development and Animation",
+  "subtitle": "",
+  "client": "",
+  "projectType": [
+      "design",
+      "look development",
+      "animation",
+      "motion design"
+  ],
+  "description": "",
+  "extendedsDescription":"",
+  "videosDescription":" ",
+  "videos": [
+      {
+          "platform": "vimeo",
+          "id": "1061900650",
+          "type": "main",
+          "options": {
+              "autoplay": false,
+              "loop": true,
+              "title": false,
+              "byline": false,
+              "portrait": false,
+              "color": "ff9933"
+          }
+      },
+
+        {
+            "platform": "vimeo",
+            "id": "1061902355",
+            "type": "",
+            "options": {
+                "autoplay": false,
+                "loop": true,
+                "title": false,
+                "byline": false,
+                "portrait": false,
+                "color": "ff9933"
+            }
+        }
+        
+  ],
+  "imagesDescription":"",
+
+  "images": [
+      {
+          "url": "./images/projects/oakflats/oakflats_0_.jpg",
+          "alt": "Look Development Hero Shot",
+          "type": "hero",
+          "caption": ""
+      },
+      {
+          "url":"./images/projects/oakflats/oakflats_1_.jpg",
+          "alt": "Design Process Shot 1",
+          "type": "design",
+          "caption": ""
+      },
+      {
+          "url": "./images/projects/oakflats/oakflats_2_.jpg",
+          "alt": "Animation Still 1",
+          "type": "looks",
+          "caption": ""
+      },
+      {
+        "url": "./images/projects/oakflats/oakflats_3_.jpg",
+        "alt": "Animation Still 1",
+        "type": "looks",
+        "caption": ""
+    },
+    {
+        "url": "./images/projects/oakflats/oakflats_4_.jpg",
+        "alt": "Animation Still 1",
+        "type": "looks",
+        "caption": ""
+    },
+    {
+        "url": "./images/projects/oakflats/oakflats_5_.jpg",
+        "alt": "Animation Still 1",
+        "type": "looks",
+        "caption": ""
+    },
+    {
+        "url": "./images/projects/oakflats/oakflats_6_.jpg",
+        "alt": "Animation Still 1",
+        "type": "looks",
+        "caption": ""
+    },
+    {
+        "url": "./images/projects/oakflats/oakflats_7_.jpg",
+        "alt": "Animation Still 1",
+        "type": "looks",
+        "caption": ""
+    },
+    {
+        "url": "./images/projects/oakflats/oakflats_8_.jpg",
+        "alt": "Animation Still 1",
+        "type": "looks",
+        "caption": ""
+    },
+    {
+        "url": "./images/projects/oakflats/oakflats_9_.jpg",
+        "alt": "Animation Still 1",
+        "type": "looks",
+        "caption": ""
+    }
+      
+   
+  ],
+  "skillLabels": [
+      "motion-design",
+      "Look Development",
+      "boards",
+      "documentary",
+      "Data Visualization"
+  ],
+  "softwareLabels": [
+      "after-effects",
+      "cinema-4d",
+      "photoshop",
+      "Adobe Illustrator"
+  ],
+  "casestudy": {
+    "challenge": "",
+    "approach": "",
+    "results": ""
+  },
+
+  "credits": {
+    "credit1": "",
+    "credit2": ""
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "id": "ria-reflex",
+  "title": "RIA Reflex Sport GLasses",
+  "subtitle": "Promotional video for RIA's new Sport// PickleBall Pro glasses.",
+  "client": "RIA",
+  "projectType": [
+      "3d Design",
+      "animation",
+      "motion design"
+  ],
+  "description": "Great opportunity to work with a new player in the sportsware space.  Ria wanted a quick solution to show off their new, still in production frames.   ",
+  "extendedsDescription":"",
+  "videosDescription":"",
+  "videos": [
+      {
+          "platform": "vimeo",
+          "id": "903770926",
+          "type": "main",
+          "aspectRatio":"16:9",
+          "options": {
+              "autoplay": false,
+              "loop": true,
+              "title": false,
+              "byline": false,
+              "portrait": false,
+              "color": "ff9933"
+          }
+      }
+  ],
+  "imagesDescription":"These Are images",
+
+  
+
+  "images": [
+      {
+          "url": "./images/projects/ria-reflex/ria-reflex.jpg",
+          "alt": "",
+          "type": "thumbnail",
+          "caption": ""
+      }
+     
+  ],
+  "skillLabels": [
+      "motion-design",
+      "3d-animation",
+      "branding",
+      "Product promo"
+  ],
+  "softwareLabels": [
+      "after-effects",
+      "cinema-4d",
+      "Redhshift",
+      "photoshop"
+  ]
+ 
+
+  
+}

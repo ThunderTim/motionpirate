@@ -7,10 +7,22 @@ body {
 
 main {
     padding-top: 80px;
-    max-width: 1440px;
+    max-width:1280px;
     margin: 0 auto;
     padding: 80px 2rem 0;
+    
 }
+
+.secondary {
+    
+    padding-top: 80px;
+    max-width: 900x;
+    margin: 0 auto;
+    
+    padding: 80px 2rem 0;
+    
+}
+
 
 .section-info {
     margin: 2rem 0 2rem;
@@ -72,7 +84,7 @@ padding: 0rem 4rem;
     position: relative;
     aspect-ratio: 1;
     background: #333;
-    border-radius: 8px;
+    border-radius: 8%;
     overflow: hidden;
 }
 

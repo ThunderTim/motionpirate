@@ -60,17 +60,73 @@ body {
 }
 
 /* Header styles */
+/* Header styles */
 .project-header {
-    
+
     position: sticky;
-    top: 100px;
-    background-color: rgba(0, 0, 0, 0);
-    z-index: 20;
-    display: block;
-    padding: 0%;
-    padding-top: 10px;
-    padding-bottom: 10px;
-   
+    top: 4rem;
+    background-color: rgba(0, 0, 0, 0); /* Transparent background */
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    z-index: 2000;
+    padding: 15px 0;
+    transition: all 0.3s ease;
+    border-bottom: 1px solid transparent;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Left justify */
+    justify-content: flex-start;
+}
+
+.project-title, .project-client, .project-subtitle {
+    line-height: 1.3;
+    transition: all 0.3s ease;
+    text-align: left; /* Ensure text is left-aligned */
+    width: 100%; /* Full width to maintain alignment */
+}
+
+.project-title {
+    font-size: 1.7rem;
+    margin-bottom: 10px;
+    transition: all 0.3s ease;
+}
+
+.project-client {
+    font-size: 1.7rem;
+    margin-bottom: 10px;
+    transition: all 0.3s ease;
+}
+
+.project-subtitle {
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+/* Smaller classes that will be applied when scrolling */
+.project-header.shrink {
+    padding: 8px 0;
+    background-color: rgba(0, 0, 0, 0); /* Keep transparent */
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05); /* Very subtle border */
+    box-shadow: none; /* Remove shadow */
+    /* Maintain vertical stack */
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.project-title.shrink {
+    font-size: 1rem;
+    margin-bottom: 5px;
+}
+
+.project-client.shrink {
+    font-size: 1rem;
+    margin-bottom: 5px;
+}
+
+.project-subtitle.shrink {
+    font-size: 0.8rem;
 }
 
 .intro-icons-container{
@@ -169,15 +225,19 @@ body {
 
 .video-container {
     width: 100%;
+    max-width: 1280px;
+    margin-bottom: 20px; /* Add some spacing between videos */
 }
 
-.video-wrapper {
-    margin-bottom: 20px;
+.video-wrapper 
+{
     position: relative;
-    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    padding-bottom: 56.25%; /* Default for 16:9 */
     height: 0;
+    width: 100%;
     overflow: hidden;
     border-radius: 1rem;
+    margin-bottom: 20px; /* Space between multiple videos */
 }
 
 .video-wrapper iframe {
@@ -186,7 +246,35 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
+    border-radius: 1rem; /* Match the wrapper */
 }
+
+.video-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1;
+    border-radius: 1rem;
+}
+.video-item-container {
+    margin-bottom: 40px; /* Space between video items */
+}
+
+.individual-video-description {
+    margin-top: 10px;
+    margin-bottom: 0;
+    font-size: 0.9rem;
+    color: #aaa; /* Subtle color for the description */
+    line-height: 1.5;
+}
+
+
+
+
+
 
 /* Image gallery */
 .project-image-section {

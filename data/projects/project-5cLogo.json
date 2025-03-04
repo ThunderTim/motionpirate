@@ -1,0 +1,180 @@
+{
+  "id": "5currentsLogo",
+  "title": "Logo Animation & Development",
+  "subtitle": "",
+  "client": "",
+  "projectType": [
+      "design",
+      "look development",
+      "animation",
+      "motion design"
+  ],
+  "description": "",
+  "extendedsDescription":"",
+  "videosDescription":" ",
+  "videos": [
+      {
+          "platform": "vimeo",
+          "id": "1061907100",
+          "type": "main",
+          "options": {
+              "autoplay": false,
+              "loop": true,
+              "title": false,
+              "byline": false,
+              "portrait": false,
+              "color": "ff9933"
+          }
+      },
+
+        {
+            "platform": "vimeo",
+            "id": "1061908376",
+            "type": "",
+            "options": {
+                "autoplay": false,
+                "loop": true,
+                "title": false,
+                "byline": false,
+                "portrait": false,
+                "color": "ff9933"
+            }
+        }, 
+
+        {
+            "platform": "vimeo",
+            "id": "1061908394",
+            "type": "",
+            "options": {
+                "autoplay": false,
+                "loop": true,
+                "title": false,
+                "byline": false,
+                "portrait": false,
+                "color": "ff9933"
+            }
+        },
+        {
+            "platform": "vimeo",
+            "id": "851636465",
+            "type": "",
+            "options": {
+                "autoplay": false,
+                "loop": true,
+                "title": false,
+                "byline": false,
+                "portrait": false,
+                "color": "ff9933"
+            }
+        }
+        
+  ],
+  "imagesDescription":"",
+
+  "images": [
+        {
+            "url": "./images/projects/5c/5cBeauty2.jpg",
+            "alt": "Animation Still 1",
+            "type": "hero",
+            "caption": ""
+        },
+      {
+          "url": "./images/projects/5c/5c_lookDev_0_.jpg",
+          "alt": "Look Development Hero Shot",
+          "type": "still",
+          "caption": ""
+      },
+      {
+          "url":"./images/projects/5c/5c_lookDev_1_.jpg",
+          "alt": "Design Process Shot 1",
+          "type": "design",
+          "caption": ""
+      },
+      {
+          "url": "./images/projects/5c/5c_lookDev_2_.jpg",
+          "alt": "Animation Still 1",
+          "type": "looks",
+          "caption": ""
+      },
+      {
+        "url": "./images/projects/5c/5c_lookDev_3_.jpg",
+        "alt": "Animation Still 1",
+        "type": "looks",
+        "caption": ""
+    },
+    {
+        "url": "./images/projects/5c/5c_lookDev_4_.jpg",
+        "alt": "Animation Still 1",
+        "type": "looks",
+        "caption": ""
+    },
+    {
+        "url": "./images/projects/5c/5c_lookDev_5_.jpg",
+        "alt": "Animation Still 1",
+        "type": "looks",
+        "caption": ""
+    },
+    {
+        "url": "./images/projects/5c/5c_lookDev_6_.jpg",
+        "alt": "Animation Still 1",
+        "type": "looks",
+        "caption": ""
+    },
+    {
+        "url": "./images/projects/5c/5c_lookDev_7_.jpg",
+        "alt": "Animation Still 1",
+        "type": "looks",
+        "caption": ""
+    },
+    
+    {
+        "url": "./images/projects/5c/5c_lookDev_9_.jpg",
+        "alt": "Animation Still 55",
+        "type": "looks",
+        "caption": ""
+    },
+    {
+        "url": "./images/projects/5c/5cBeauty.jpg",
+        "alt": "Animation Still 66",
+        "type": "looks",
+        "caption": ""
+    },
+    {
+        "url": "./images/projects/5c/5cBeauty2.jpg",
+        "alt": "Animation Still 1",
+        "type": "hero",
+        "caption": ""
+    },
+    {
+        "url": "./images/projects/5c/5c_endLogo.jpg",
+        "alt": "Animation Still 1",
+        "type": "looks",
+        "caption": ""
+    }
+      
+   
+  ],
+  "skillLabels": [
+      "motion-design",
+      "Look Development",
+      "boards",
+      "documentary",
+      "Data Visualization"
+  ],
+  "softwareLabels": [
+      "after-effects",
+      "cinema-4d",
+      "photoshop",
+      "Adobe Illustrator"
+  ],
+  "casestudy": {
+    "challenge": "",
+    "approach": "",
+    "results": ""
+  },
+
+  "credits": {
+    "credit1": "",
+    "credit2": ""
+  }
+}

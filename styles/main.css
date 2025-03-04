@@ -194,12 +194,28 @@ hr.solid {
     opacity: 0;
 }
 
-.name-overlay-description {
-    color: #FF79C6;
-    animation: fadeUpIn 1s ease-out forwards;
-    animation-delay: 1s;
-    opacity: 0;
+
+
+@keyframes gradientShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
 }
+
+
+.name-overlay-description {
+    opacity: 0; /* Ensure it's hidden initially */
+    animation: fadeUpIn 1s ease-out forwards, gradientShift 5s infinite linear;
+    animation-delay: 1s, 1s; /* Make gradient start after fadeUpIn */
+    
+    background-image: linear-gradient(45deg, #ff5733, #33ff57, #3357ff, #ff5733);
+    background-size: 300% 300%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent; /* Keep text hidden */
+}
+
+
 
 /* Updated Preloader Image Styles */
 .preloader-image {
