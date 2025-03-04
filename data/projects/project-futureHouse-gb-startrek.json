@@ -1,0 +1,252 @@
+ {
+  "id": "fh-gb-startrek",
+  "title": "StarTrek Online Trailer",
+  "subtitle": "Game Trailer",
+  "client": "Future House studios // GearBox - Paramount",
+  "projectType": [
+      "simulation",
+      "3d modeling",
+      "look development",
+      "vfx",
+      "texturing",
+      "animation",
+      "motion design"
+      
+  ],
+  "description": "Part of the rollout to introduce a plan new ship to players of the online comunity: StarTrek Online",
+  "extendedsDescription":"This was a great challenge and in partnership with the Geabox Marketing team we launched a really fantastic trailer that built excitement and introduced some new playables coming to the StarTrek Online community in 2023",
+  "videosDescription":" This was a great opportunity to play with some of the new simulation tools in C4d and explore the capabilities of Embergen.  Rendered in Redshift.  Have alook behind the scenes at some of the development in progress. ",
+  "videos": [
+      {
+          "platform": "vimeo",
+          "id": "851035203",
+          "type": "main",
+          "aspectRatio": "16:9",
+          "description":"The complete trailer at launch.",
+          "options": {
+              "autoplay": false,
+              "loop": true,
+              "title": false,
+              "byline": false,
+              "portrait": false,
+              "color": "ff9933"
+          }
+      },
+      {
+        "platform": "vimeo",
+        "id": "1062427549",
+        "type": "main",
+        "aspectRatio": "16:9",
+        "description":"",
+        "options": {
+            "autoplay": false,
+            "loop": true,
+            "title": false,
+            "byline": false,
+            "portrait": false,
+            "color": "ff9933"
+        }
+    },
+    {
+        "platform": "vimeo",
+        "id": "1062427615",
+        "type": "main",
+        "aspectRatio": "16:9",
+        "description":"",
+        "options": {
+            "autoplay": false,
+            "loop": true,
+            "title": false,
+            "byline": false,
+            "portrait": false,
+            "color": "ff9933"
+        }
+    },
+    {
+        "platform": "vimeo",
+        "id": "1062427674",
+        "type": "main",
+        "aspectRatio": "16:9",
+        "description":"",
+        "options": {
+            "autoplay": false,
+            "loop": true,
+            "title": false,
+            "byline": false,
+            "portrait": false,
+            "color": "ff9933"
+        }
+    },
+    {
+        "platform": "vimeo",
+        "id": "1062427793",
+        "type": "main",
+        "aspectRatio": "16:9",
+        "description":"",
+        "options": {
+            "autoplay": false,
+            "loop": true,
+            "title": false,
+            "byline": false,
+            "portrait": false,
+            "color": "ff9933"
+        }
+    },
+    {
+        "platform": "vimeo",
+        "id": "1062428417",
+        "type": "main",
+        "aspectRatio": "16:9",
+        "description":"",
+        "options": {
+            "autoplay": false,
+            "loop": true,
+            "title": false,
+            "byline": false,
+            "portrait": false,
+            "color": "ff9933"
+        }
+    },
+    {
+        "platform": "vimeo",
+        "id": "1062428681",
+        "type": "main",
+        "aspectRatio": "16:9",
+        "description":"",
+        "options": {
+            "autoplay": false,
+            "loop": true,
+            "title": false,
+            "byline": false,
+            "portrait": false,
+            "color": "ff9933"
+        }
+    }
+    
+      
+
+
+        
+        
+  ],
+  "imagesDescription":"",
+
+  "images": [
+       
+        {
+            "url": "./images/projects/0_fh-StarTrek/fh_gb_StarTrek_000_.jpg",
+            "alt": "",
+            "type": "hero",
+            "caption": ""
+        },
+        {
+            "url": "./images/projects/0_fh-StarTrek/fh_gb_StarTrek_001_.jpg",
+            "alt": "",
+            "type": "still",
+            "caption": ""
+        },
+        {
+            "url": "./images/projects/0_fh-StarTrek/fh_gb_StarTrek_002_.jpg",
+            "alt": "",
+            "type": "still",
+            "caption": ""
+        },
+        {
+            "url": "./images/projects/0_fh-StarTrek/fh_gb_StarTrek_003_.jpg",
+            "alt": "",
+            "type": "still",
+            "caption": ""
+        },
+        {
+            "url": "./images/projects/0_fh-StarTrek/fh_gb_StarTrek_004_.jpg",
+            "alt": "",
+            "type": "still",
+            "caption": ""
+        },
+        {
+            "url": "./images/projects/0_fh-StarTrek/fh_gb_StarTrek_005_.jpg",
+            "alt": "",
+            "type": "still",
+            "caption": ""
+        },
+        {
+            "url": "./images/projects/0_fh-StarTrek/fh_gb_StarTrek_006_.jpg",
+            "alt": "",
+            "type": "still",
+            "caption": ""
+        },
+        {
+            "url": "./images/projects/0_fh-StarTrek/fh_gb_StarTrek_007_.jpg",
+            "alt": "",
+            "type": "still",
+            "caption": ""
+        },
+        {
+            "url": "./images/projects/0_fh-StarTrek/fh_gb_StarTrek_008_.jpg",
+            "alt": "",
+            "type": "still",
+            "caption": ""
+        },
+        {
+            "url": "./images/projects/0_fh-StarTrek/fh_gb_StarTrek_009_.jpg",
+            "alt": "",
+            "type": "still",
+            "caption": ""
+        },
+        {
+            "url":"./images/projects/0_fh-StarTrek/fh-gb-startrek_010_.jpg",
+            "alt": "",
+            "type": "still",
+            "caption": ""
+        },
+        {
+            "url": "./images/projects/0_fh-StarTrek/fh-gb-startrek_011_.jpg",
+            "alt": "",
+            "type": "still",
+            "caption": ""
+        },
+        {
+            "url": "./images/projects/0_fh-StarTrek/fh-gb-startrek_012_.jpg",
+            "alt": "",
+            "type": "still",
+            "caption": ""
+        },
+        {
+            "url": "./images/projects/0_fh-StarTrek/fh-gb-startrek_013_.jpg",
+            "alt": "",
+            "type": "still",
+            "caption": ""
+        }
+        
+        
+        
+
+        
+      
+      
+   
+  ],
+  "skillLabels": [
+      "motion-design",
+      "Look Development",
+      "boards",
+      "documentary",
+      "Data Visualization"
+  ],
+  "softwareLabels": [
+      "after-effects",
+      "cinema-4d",
+      "photoshop",
+      "Adobe Illustrator"
+  ],
+  "casestudy": {
+    "challenge": "",
+    "approach": "",
+    "results": ""
+  },
+
+  "credits": {
+    "credit1": "",
+    "credit2": ""
+  }
+}

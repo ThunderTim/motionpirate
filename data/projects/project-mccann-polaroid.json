@@ -1,0 +1,77 @@
+{
+  "id": "mccann-polaroid",
+  "title": "Instax",
+  "subtitle": "Product Rendering",
+  "client": "McCann NY // Polaroid",
+  "projectType": [
+      "3d Texturing",
+      "3d Lighting",
+      "3D Rendering",
+      "animation",
+      "Compositing"
+  ],
+  "description": "",
+  "extendedsDescription":"",
+  "videosDescription":" ",
+  "videos": [
+    {
+        "platform": "vimeo",
+        "id": "1062449179",
+        "type": "main",
+        "options": {
+            "autoplay": false,
+            "loop": true,
+            "title": false,
+            "byline": false,
+            "portrait": false,
+            "color": "ff9933"
+        }
+    }
+      
+   
+       
+        
+  ],
+  "imagesDescription":"",
+
+  "images": [
+        {
+            "url": "./images/projects/mcCannNy-polaroid/mc-insta_000_.jpg",
+            "alt": "Tim Coleman Motion Design, Illustrated Board",
+            "type": "hero",
+            "caption": ""
+        },
+        {
+            "url": "./images/projects/mcCannNy-polaroid/mc-insta_001_.jpg",
+            "alt": "Tim Coleman Motion Design, Illustrated Board",
+            "type": "hero",
+            "caption": ""
+        }
+       
+      
+   
+  ],
+  "skillLabels": [
+      "motion-design",
+      "Look Development",
+      "boards",
+      "documentary",
+      "Data Visualization"
+  ],
+  "softwareLabels": [
+      "after-effects",
+      "cinema-4d",
+      "photoshop",
+      "Adobe Illustrator"
+  ],
+  "casestudy": {
+    "challenge": "",
+    "approach": "",
+    "results": ""
+  },
+
+  "credits": {
+    "credit1": "",
+    "credit2": ""
+  }
+}

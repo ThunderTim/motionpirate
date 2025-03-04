@@ -1,0 +1,314 @@
+{
+  "id": "ib-academy",
+  "title": "Academy Museum of Motion Pictures",
+  "subtitle": "App Development, AR Features, Socials & App video",
+  "client": "Impossible Bureau //  Academy Museum of Motion Pictures",
+  "projectType": [
+      "3d Design",
+      "Augmented Reality strategy",
+      "Development",
+      "Unity 3D",
+      "animation",
+      "motion design"
+  ],
+  "description": "Highlight project of th year.  I was invited to help conceptualize and execute on a number of Augmented reality experiences that would become part of the App experience as a value add for patrons of the Academy Museum.  In additional to behind the scenes access to new exhibits the team able to create some really engaging work. ",
+  "extendedsDescription":"Included below is some of the reseach and exploration work that went into creating the final product, I hope you enjoy a peak at some of the many explorations.",
+  "videosDescription":"",
+  "videos": [
+      {
+          "platform": "vimeo",
+          "id": "1062480765",
+          "type": "main",
+          "aspectRatio":"16:9",
+          "options": {
+              "autoplay": false,
+              "loop": true,
+              "title": false,
+              "byline": false,
+              "portrait": false,
+              "color": "ff9933"
+          }
+      },
+      {
+        "platform": "vimeo",
+        "id": "1062434247",
+        "type": "",
+        "aspectRatio":"3:2.5",
+        "options": {
+            "autoplay": false,
+            "loop": true,
+            "title": false,
+            "byline": false,
+            "portrait": false,
+            "color": "ff9933"
+        }
+    },
+    {
+        "platform": "vimeo",
+        "id": "1062434163",
+        "type": "",
+        "aspectRatio":"16:9",
+        "options": {
+            "autoplay": false,
+            "loop": true,
+            "title": false,
+            "byline": false,
+            "portrait": false,
+            "color": "ff9933"
+        }
+    },
+    {
+        "platform": "vimeo",
+        "id": "1062435205",
+        "type": "main",
+        "aspectRatio":"20:9",
+        "options": {
+            "autoplay": false,
+            "loop": true,
+            "title": false,
+            "byline": false,
+            "portrait": false,
+            "color": "ff9933"
+        }
+    },
+    {
+        "platform": "vimeo",
+        "id": "1062436470",
+        "type": "main",
+        "aspectRatio":"16:9",
+        "options": {
+            "autoplay": false,
+            "loop": true,
+            "title": false,
+            "byline": false,
+            "portrait": false,
+            "color": "ff9933"
+        }
+    },
+    {
+        "platform": "vimeo",
+        "id": "1062437049",
+        "type": "main",
+        "aspectRatio":"16:9",
+        "options": {
+            "autoplay": false,
+            "loop": true,
+            "title": false,
+            "byline": false,
+            "portrait": false,
+            "color": "ff9933"
+        }
+    },
+    {
+        "platform": "vimeo",
+        "id": "1062448271",
+        "type": "main",
+        "aspectRatio":"16:9",
+        "options": {
+            "autoplay": false,
+            "loop": true,
+            "title": false,
+            "byline": false,
+            "portrait": false,
+            "color": "ff9933"
+        }
+    },
+    {
+        "platform": "vimeo",
+        "id": "1062435468",
+        "type": "main",
+        "aspectRatio":"16:9",
+        "options": {
+            "autoplay": false,
+            "loop": true,
+            "title": false,
+            "byline": false,
+            "portrait": false,
+            "color": "ff9933"
+        }
+    },
+    {
+        "platform": "vimeo",
+        "id": "1062458283",
+        "type": "main",
+        "aspectRatio":"16:9",
+        "options": {
+            "autoplay": false,
+            "loop": true,
+            "title": false,
+            "byline": false,
+            "portrait": false,
+            "color": "ff9933"
+        }
+    },
+    {
+        "platform": "vimeo",
+        "id": "1062448293",
+        "type": "main",
+        "aspectRatio":"16:9",
+        "options": {
+            "autoplay": false,
+            "loop": true,
+            "title": false,
+            "byline": false,
+            "portrait": false,
+            "color": "ff9933"
+        }
+    },
+    {
+        "platform": "vimeo",
+        "id": "1062458765",
+        "type": "main",
+        "aspectRatio":"16:9",
+        "options": {
+            "autoplay": false,
+            "loop": true,
+            "title": false,
+            "byline": false,
+            "portrait": false,
+            "color": "ff9933"
+        }
+    },
+    {
+        "platform": "vimeo",
+        "id": "1062448325",
+        "type": "main",
+        "aspectRatio":"16:9",
+        "options": {
+            "autoplay": false,
+            "loop": true,
+            "title": false,
+            "byline": false,
+            "portrait": false,
+            "color": "ff9933"
+        }
+    },
+    {
+        "platform": "vimeo",
+        "id": "1062436947",
+        "type": "main",
+        "aspectRatio":"16:9",
+        "options": {
+            "autoplay": false,
+            "loop": true,
+            "title": false,
+            "byline": false,
+            "portrait": false,
+            "color": "ff9933"
+        }
+    },
+    {
+        "platform": "vimeo",
+        "id": "1062458520",
+        "type": "main",
+        "aspectRatio":"16:9",
+        "options": {
+            "autoplay": false,
+            "loop": true,
+            "title": false,
+            "byline": false,
+            "portrait": false,
+            "color": "ff9933"
+        }
+    },
+    {
+        "platform": "vimeo",
+        "id": "1062466164",
+        "type": "main",
+        "aspectRatio":"16:9",
+        "options": {
+            "autoplay": false,
+            "loop": true,
+            "title": false,
+            "byline": false,
+            "portrait": false,
+            "color": "ff9933"
+        }
+    },
+    {
+        "platform": "vimeo",
+        "id": "1062466105",
+        "type": "main",
+        "aspectRatio":"16:9",
+        "options": {
+            "autoplay": false,
+            "loop": true,
+            "title": false,
+            "byline": false,
+            "portrait": false,
+            "color": "ff9933"
+        }
+    },
+    {
+        "platform": "vimeo",
+        "id": "1062437507",
+        "type": "main",
+        "aspectRatio":"16:9",
+        "options": {
+            "autoplay": false,
+            "loop": true,
+            "title": false,
+            "byline": false,
+            "portrait": false,
+            "color": "ff9933"
+        }
+    },
+    {
+        "platform": "vimeo",
+        "id": "1062455725",
+        "type": "main",
+        "aspectRatio":"16:9",
+        "options": {
+            "autoplay": false,
+            "loop": true,
+            "title": false,
+            "byline": false,
+            "portrait": false,
+            "color": "ff9933"
+        }
+    },
+    {
+        "platform": "vimeo",
+        "id": "1062481739",
+        "type": "main",
+        "aspectRatio":"16:9",
+        "options": {
+            "autoplay": false,
+            "loop": true,
+            "title": false,
+            "byline": false,
+            "portrait": false,
+            "color": "ff9933"
+        }
+    }
+
+  ],
+  "imagesDescription":"These Are images",
+
+  
+
+  "images": [
+      {
+          "url": "./images/projects/ib-academy/MultiPlane_objects.jpg",
+          "alt": "",
+          "type": "thumbnail",
+          "caption": ""
+      }
+     
+  ],
+  "skillLabels": [
+      "motion-design",
+      "3d-animation",
+      "branding",
+      "Product promo"
+  ],
+  "softwareLabels": [
+      "after-effects",
+      "cinema-4d",
+      "Redhshift",
+      "photoshop"
+  ]
+ 
+
+  
+}

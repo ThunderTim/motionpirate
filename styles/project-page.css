@@ -59,6 +59,7 @@ body {
     
 }
 
+
 /* Header styles */
 /* Header styles */
 .project-header {
@@ -183,27 +184,28 @@ body {
 
 /* Project type list */
 .project-type-container {
-    
     margin-bottom: 20px;
-    
+    width: 100%;
 }
 
 .project-type-list {
     display: flex;
+    flex-wrap: wrap; /* Allow items to wrap on smaller screens */
     list-style: none;
-    
     gap: 10px;
     margin-top: 10px;
-    
+    padding-left: 0; /* Remove default padding */
 }
 
-.project-type-list li {
+
+.project-type-list li  {
     background-color: #090909;
     padding: 5px 10px;
     border-radius: .5rem;
     font-size: 0.9rem;
     color: #666;
     margin-bottom: 3rem;
+    white-space: nowrap; /* Keep each tag on one line */
     
 }
 
@@ -212,6 +214,9 @@ body {
 .project-extended-description {
     margin-bottom: 30px;
     line-height: 1.6;
+    font-size: 0.9rem;
+    color: #868686;
+    
 }
 
 /* Video section */
@@ -428,5 +433,79 @@ body {
     
     .project-client {
         font-size: 1.3rem;
+    }
+}
+
+
+.share-button-container {
+    margin: 20px 0;
+    text-align: right;
+}
+
+.share-button {
+    display: inline-flex;
+    align-items: center;
+    background: #333;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    transition: background-color 0.2s ease;
+}
+
+.share-button:hover {
+    background: #555;
+}
+
+.share-button svg {
+    margin-right: 8px;
+}
+
+.copy-feedback {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 4px;
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    z-index: 1000;
+    animation: fadeInOut 2s ease;
+}
+
+@keyframes fadeInOut {
+    0% { opacity: 0; }
+    20% { opacity: 1; }
+    80% { opacity: 1; }
+    100% { opacity: 0; }
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+    .project-type-list {
+        gap: 8px; /* Slightly reduce gap on mobile */
+    }
+    
+    .project-type-list li {
+        padding: 4px 10px; /* Slightly smaller padding on mobile */
+        font-size: 0.85rem; /* Slightly smaller font on mobile */
+        margin-bottom: 5px; /* Add bottom margin for better spacing when wrapped */
+    }
+}
+
+/* For very small screens, you could make it a vertical list */
+@media (max-width: 480px) {
+    .project-type-list {
+        /* Uncomment this if you prefer a vertical list on very small screens
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 6px;
+        */
     }
 }

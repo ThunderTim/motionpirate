@@ -1,10 +1,9 @@
 document.addEventListener('DOMContentLoaded', function() {
     const projectContainer = document.getElementById('projectContainer');
     
-    
-
-    // Get the selected project ID from localStorage
-    const projectId = localStorage.getItem('selectedProjectId');
+    // Get the project ID from URL parameter instead of localStorage
+    const urlParams = new URLSearchParams(window.location.search);
+    const projectId = urlParams.get('id');
     
     if (!projectId) {
         projectContainer.innerHTML = '<p class="error-message">No project selected. <a href="work.html">Return to gallery</a></p>';
@@ -14,35 +13,54 @@ document.addEventListener('DOMContentLoaded', function() {
     // Function to load the project data
     async function loadProjectDetails() {
         try {
+            console.log('Attempting to load project:', projectId);
+            
             // First, find the project file path from the index
+            console.log('Fetching project index...');
             const indexResponse = await fetch('./data/json-index/project-index.json');
+            if (!indexResponse.ok) {
+                throw new Error(`Failed to fetch index: ${indexResponse.status} ${indexResponse.statusText}`);
+            }
+            
             const indexData = await indexResponse.json();
+            console.log('Project index loaded:', indexData);
             
             // Find the project in the index
             const projectInfo = indexData.projects.find(p => p.id === projectId);
+            console.log('Project info found:', projectInfo);
             
             if (!projectInfo) {
                 throw new Error('Project not found in index');
             }
             
             // Now fetch the actual project data
+            console.log('Fetching project data from:', projectInfo.path);
             const projectResponse = await fetch(projectInfo.path);
+            if (!projectResponse.ok) {
+                throw new Error(`Failed to fetch project: ${projectResponse.status} ${projectResponse.statusText}`);
+            }
+            
             const projectData = await projectResponse.json();
+            console.log('Project data loaded:', projectData);
             
             // Update page title
             document.title = `Motion Pirate - ${projectData.title}`;
             
             // Create the project content
+            console.log('Creating project content...');
             createProjectContent(projectData);
+            console.log('Project content created successfully');
             
         } catch (error) {
             console.error('Error loading project:', error);
-            projectContainer.innerHTML = '<p class="error-message">Error loading project details. <a href="work.html">Return to gallery</a></p>';
+            projectContainer.innerHTML = `<p class="error-message">Error loading project details: ${error.message} <br><a href="work.html">Return to gallery</a></p>`;
         }
     }
-    
+
     // Function to create the project content
     function createProjectContent(project) {
+
+        console.log("Creating project content for:", project.title);
         // First, clear the loading message
         projectContainer.innerHTML = '';
 
@@ -118,106 +136,106 @@ document.addEventListener('DOMContentLoaded', function() {
         }
         
       // Add videos if available
-if (project.videos && project.videos.length) {
-    const videoSection = document.createElement('div');
-    videoSection.className = 'project-video-section';
-    
-    // Add video description if available
-    if (project.videosDescription) {
-        const videoDesc = document.createElement('p');
-        videoDesc.className = 'video-description';
-        videoDesc.textContent = project.videosDescription;
-        videoSection.appendChild(videoDesc);
-    }
-    
-    const videoContainer = document.createElement('div');
-    videoContainer.className = 'video-container';
-    
-    // Process each video...
-    // Process each video
-project.videos.forEach((video, index) => {
-    if (video.platform === 'vimeo' && video.id) {
-        // Create options string for Vimeo
-        const optionsStr = video.options
-            ? Object.entries(video.options)
-                .map(([key, value]) => `${key}=${value}`)
-                .join('&')
-            : '';
-        
-        // Create a container for this individual video and its description
-        const videoItemContainer = document.createElement('div');
-        videoItemContainer.className = 'video-item-container';
-        
-        // Set aspect ratio based on JSON data, defaulting to 16:9
-        let paddingBottom = '56.25%'; // Default 16:9 aspect ratio
-        
-        // Only override the default if aspectRatio exists and is valid
-        if (video.hasOwnProperty('aspectRatio') && video.aspectRatio) {
-            try {
-                const [width, height] = video.aspectRatio.split(':').map(Number);
-                if (width && height) {
-                    paddingBottom = (height / width * 100) + '%';
-                    console.log("Calculated padding for", video.id, ":", paddingBottom);
-                }
-            } catch (e) {
-                console.error("Error parsing aspect ratio for video", video.id, e);
+            if (project.videos && project.videos.length) {
+            const videoSection = document.createElement('div');
+            videoSection.className = 'project-video-section';
+            
+            // Add video description if available
+            if (project.videosDescription) {
+                const videoDesc = document.createElement('p');
+                videoDesc.className = 'video-description';
+                videoDesc.textContent = project.videosDescription;
+                videoSection.appendChild(videoDesc);
             }
-        }
-        
-        // Create video wrapper with appropriate aspect ratio
-        const videoWrapper = document.createElement('div');
-        videoWrapper.className = `video-wrapper ${video.type || ''}`;
-        videoWrapper.style.paddingBottom = paddingBottom;
-        videoWrapper.style.zIndex = 10 - index; 
-        
-        // Create iframe
-        const iframe = document.createElement('iframe');
-        iframe.src = `https://player.vimeo.com/video/${video.id}?${optionsStr}`;
-        iframe.width = '100%';
-        iframe.height = '100%';
-        iframe.frameBorder = '0';
-        iframe.allow = 'autoplay; fullscreen; picture-in-picture';
-        iframe.allowFullscreen = true;
-        
-        videoWrapper.appendChild(iframe);
-        
-        // Add overlay for consistent border radius appearance
-        const overlay = document.createElement('div');
-        overlay.className = 'video-overlay';
-        overlay.style.position = 'absolute';
-        overlay.style.top = '0';
-        overlay.style.left = '0';
-        overlay.style.width = '100%';
-        overlay.style.height = '100%';
-        overlay.style.pointerEvents = 'none';
-        overlay.style.zIndex = '1';
-        videoWrapper.appendChild(overlay);
-        
-        // Add the video wrapper to the item container
-        videoItemContainer.appendChild(videoWrapper);
-        
-        // Check if this video has a description and add it
-        if (video.description && video.description.trim()) {
-            const videoDesc = document.createElement('p');
-            videoDesc.className = 'individual-video-description';
-            videoDesc.textContent = video.description;
-            videoItemContainer.appendChild(videoDesc);
-        }
-        
-        // Add the complete item (video + its description) to the container
-        videoContainer.appendChild(videoItemContainer);
-        console.log("Added video to container:", video.id);
-    } else {
-        console.warn("Skipping video due to missing platform or ID:", video);
-    }
-});
+            
+            const videoContainer = document.createElement('div');
+            videoContainer.className = 'video-container';
+            
+            // Process each video...
+            // Process each video
+        project.videos.forEach((video, index) => {
+            if (video.platform === 'vimeo' && video.id) {
+                // Create options string for Vimeo
+                const optionsStr = video.options
+                    ? Object.entries(video.options)
+                        .map(([key, value]) => `${key}=${value}`)
+                        .join('&')
+                    : '';
+                
+                // Create a container for this individual video and its description
+                const videoItemContainer = document.createElement('div');
+                videoItemContainer.className = 'video-item-container';
+                
+                // Set aspect ratio based on JSON data, defaulting to 16:9
+                let paddingBottom = '56.25%'; // Default 16:9 aspect ratio
+                
+                // Only override the default if aspectRatio exists and is valid
+                if (video.hasOwnProperty('aspectRatio') && video.aspectRatio) {
+                    try {
+                        const [width, height] = video.aspectRatio.split(':').map(Number);
+                        if (width && height) {
+                            paddingBottom = (height / width * 100) + '%';
+                            console.log("Calculated padding for", video.id, ":", paddingBottom);
+                        }
+                    } catch (e) {
+                        console.error("Error parsing aspect ratio for video", video.id, e);
+                    }
+                }
+                
+                // Create video wrapper with appropriate aspect ratio
+                const videoWrapper = document.createElement('div');
+                videoWrapper.className = `video-wrapper ${video.type || ''}`;
+                videoWrapper.style.paddingBottom = paddingBottom;
+                videoWrapper.style.zIndex = 10 - index; 
+                
+                // Create iframe
+                const iframe = document.createElement('iframe');
+                iframe.src = `https://player.vimeo.com/video/${video.id}?${optionsStr}`;
+                iframe.width = '100%';
+                iframe.height = '100%';
+                iframe.frameBorder = '0';
+                iframe.allow = 'autoplay; fullscreen; picture-in-picture';
+                iframe.allowFullscreen = true;
+                
+                videoWrapper.appendChild(iframe);
+                
+                // Add overlay for consistent border radius appearance
+                const overlay = document.createElement('div');
+                overlay.className = 'video-overlay';
+                overlay.style.position = 'absolute';
+                overlay.style.top = '0';
+                overlay.style.left = '0';
+                overlay.style.width = '100%';
+                overlay.style.height = '100%';
+                overlay.style.pointerEvents = 'none';
+                overlay.style.zIndex = '1';
+                videoWrapper.appendChild(overlay);
+                
+                // Add the video wrapper to the item container
+                videoItemContainer.appendChild(videoWrapper);
+                
+                // Check if this video has a description and add it
+                if (video.description && video.description.trim()) {
+                    const videoDesc = document.createElement('p');
+                    videoDesc.className = 'individual-video-description';
+                    videoDesc.textContent = video.description;
+                    videoItemContainer.appendChild(videoDesc);
+                }
+                
+                // Add the complete item (video + its description) to the container
+                videoContainer.appendChild(videoItemContainer);
+                console.log("Added video to container:", video.id);
+            } else {
+                console.warn("Skipping video due to missing platform or ID:", video);
+            }
+             });
 
-         // Add this line - it was missing
-    videoSection.appendChild(videoContainer);
-    
-    // And this line to add the video section to your main section
-    section.appendChild(videoSection);
-}
+                // Add this line - it was missing
+            videoSection.appendChild(videoContainer);
+            
+            // And this line to add the video section to your main section
+            section.appendChild(videoSection);
+        }
         
         // Add images if available
         if (project.images && project.images.length) {
@@ -405,7 +423,66 @@ if (project.credits && Object.keys(project.credits).length > 0) {
         section.appendChild(creditsSection);
     }
 }
-        
+
+        // Add share button
+const shareButtonContainer = document.createElement('div');
+shareButtonContainer.className = 'share-button-container';
+
+const shareButton = document.createElement('button');
+shareButton.className = 'share-button';
+shareButton.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"></path><polyline points="16 6 12 2 8 6"></polyline><line x1="12" y1="2" x2="12" y2="15"></line></svg> Share';
+shareButton.addEventListener('click', function() {
+    // Create the shareable link
+    const projectUrl = window.location.origin + window.location.pathname + '?id=' + project.id;
+    
+    // Check if the Web Share API is available
+    if (navigator.share) {
+        navigator.share({
+            title: project.title,
+            text: project.subtitle || 'Check out this project',
+            url: projectUrl
+        })
+        .catch(error => {
+            console.error('Error sharing:', error);
+            fallbackCopyToClipboard(projectUrl);
+        });
+    } else {
+        // Fallback for browsers that don't support Web Share API
+        fallbackCopyToClipboard(projectUrl);
+    }
+});
+
+        // Function to copy URL to clipboard as fallback
+        function fallbackCopyToClipboard(text) {
+            // Create temporary input element
+            const input = document.createElement('input');
+            input.style.position = 'fixed';
+            input.style.opacity = 0;
+            input.value = text;
+            document.body.appendChild(input);
+            
+            // Select and copy the text
+            input.select();
+            document.execCommand('copy');
+            
+            // Remove the temporary element
+            document.body.removeChild(input);
+            
+            // Show feedback
+            const message = document.createElement('div');
+            message.className = 'copy-feedback';
+            message.textContent = 'Link copied to clipboard!';
+            document.body.appendChild(message);
+            
+            // Remove feedback after delay
+            setTimeout(() => {
+                document.body.removeChild(message);
+            }, 2000);
+        }
+
+        shareButtonContainer.appendChild(shareButton);
+        section.appendChild(shareButtonContainer);
+
         // Add back button
         const backButton = document.createElement('a');
         backButton.href = 'work.html';
@@ -547,10 +624,12 @@ function applyIntermediateStyles(element, progress) {
 
 
 
-        // Add the project to the container
-        projectContainer.appendChild(section);
+    projectContainer.appendChild(section);
+    console.log("Project content added to DOM");
+
     }
     
     // Load the project details
+    
     loadProjectDetails();
 });

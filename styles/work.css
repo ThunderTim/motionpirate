@@ -72,11 +72,18 @@ padding: 0rem 4rem;
     margin: 4rem 0 2rem;
     
 }
+.work p 
+{
+    color: #4A4A4A;
+    padding-bottom: 40px;
+}
+
 
 .work-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 1rem;
+    
     
 }
 

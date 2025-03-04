@@ -1,33 +1,51 @@
 document.addEventListener('DOMContentLoaded', function() {
     const workGrid = document.querySelector('.work-grid');
     
+    // Debug information
+    console.log('Work page loaded');
+    
     // Function to load all projects
     async function loadProjects() {
         try {
-            // Fetch the list of project files (you might need a server-side solution for this)
-            // For now, we'll use a direct fetch to the projects directory and handle any errors
+            console.log('Attempting to load project index...');
+            // Fetch the list of project files
             const response = await fetch('./data/json-index/project-index.json');
+            if (!response.ok) {
+                throw new Error(`Failed to fetch project index: ${response.status} ${response.statusText}`);
+            }
+            
             const projectsIndex = await response.json();
+            console.log('Project index loaded:', projectsIndex);
             
             // Array to store all project promises
+            console.log('Loading individual project data...');
             const projectPromises = projectsIndex.projects.map(projectInfo => {
+                console.log('Fetching project:', projectInfo.path);
                 return fetch(projectInfo.path)
-                    .then(response => response.json())
+                    .then(response => {
+                        if (!response.ok) {
+                            throw new Error(`Failed to fetch project: ${response.status} ${response.statusText}`);
+                        }
+                        return response.json();
+                    })
                     .then(projectData => {
-                        return { ...projectData, path: projectInfo.path };
+                        return { ...projectData, id: projectInfo.id, path: projectInfo.path };
                     });
             });
             
             // Wait for all projects to load
             const projects = await Promise.all(projectPromises);
+            console.log('All projects loaded:', projects.length);
             
             // Clear any existing content
             workGrid.innerHTML = '';
             
             // Create a tile for each project
             projects.forEach(project => {
+                console.log('Creating tile for project:', project.title, 'with ID:', project.id);
+                
                 // Find the hero image for the tile
-                const heroImage = project.images.find(img => img.type === 'hero') || project.images[0];
+                const thumbnailImage = project.images.find(img => img.type === 'thumbnail') || project.images[0];
                 
                 // Create tile element
                 const tile = document.createElement('article');
@@ -39,7 +57,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 
                 // Create image
                 const img = document.createElement('img');
-                img.src = heroImage.url;
+                img.src = thumbnailImage.url;
                 img.alt = project.title;
                 
                 // Create overlay with project title
@@ -57,10 +75,10 @@ document.addEventListener('DOMContentLoaded', function() {
                 
                 // Add click handler to navigate to project page
                 tile.addEventListener('click', function() {
-                    // Store the project ID in localStorage for the project page to use
-                    localStorage.setItem('selectedProjectId', project.id);
-                    // Navigate to the project detail page
-                    window.location.href = 'project-page-template.html';
+                    // Create URL with project ID parameter
+                    window.location.href = `project-page-template.html?id=${project.id}`;
+                    // Optional debugging
+                    console.log('Navigating to:', `project-page-template.html?id=${project.id}`);
                 });
                 
                 // Add the tile to the grid
@@ -69,7 +87,7 @@ document.addEventListener('DOMContentLoaded', function() {
             
         } catch (error) {
             console.error('Error loading projects:', error);
-            workGrid.innerHTML = '<p class="error-message">Error loading projects. Please try again later.</p>';
+            workGrid.innerHTML = `<p class="error-message">Error loading projects: ${error.message}. Please try again later.</p>`;
         }
     }
     

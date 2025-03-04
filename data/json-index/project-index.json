@@ -1,8 +1,18 @@
 {
     "projects": [
       {
+        "id": "fh-gb-startrek",
+        "path": "./data/projects/project-futureHouse-gb-startrek.json",
+        "featured": false
+      },
+      {
         "id": "Domo-DataLifeCycle",
         "path": "./data/projects/project-domo-dataLifeCycle.json",
+        "featured": false
+      },
+      {
+        "id": "ib-academy",
+        "path": "./data/projects/project-ib-academy.json",
         "featured": false
       },
       {
@@ -39,8 +49,19 @@
         "id": "fh-venafi",
         "path": "./data/projects/project-futureHouse-venafi.json",
         "featured": false
+      },
+      {
+        "id": "mccann-polaroid",
+        "path": "./data/projects/project-mccann-polaroid.json",
+        "featured": false
+      },
+      {
+        "id": "mg-pp",
+        "path": "./data/projects/project-mg-pacificpower.json",
+        "featured": false
       }
     ]
   }
 
-  
+
+ 
