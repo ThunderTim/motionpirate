@@ -1,0 +1,73 @@
+{
+  "id": "avl",
+  "title": "AVL",
+  "subtitle": "Telling the story",
+  "client": "",
+  "projectType": [
+      "design",
+      "look development",
+      "animation",
+      "3D animation",
+      "Rendering",
+      "Redshift",
+      "Cinema 4D",
+      "After effects",
+      "motion design"
+  ],
+  "description": "",
+  "extendedsDescription":"",
+  "videosDescription":" ",
+  "videos": [
+      {
+          "platform": "vimeo",
+          "id": "351529829",
+          "type": "main",
+          "options": {
+              "autoplay": false,
+              "loop": true,
+              "title": false,
+              "byline": false,
+              "portrait": false,
+              "color": "ff9933"
+          }
+      }
+
+       
+        
+  ],
+  "imagesDescription":"",
+
+  "images": [
+        {
+            "url": "./images/projects/misc/mopi_random_001_.jpg",
+            "alt": "",
+            "type": "thumbnail",
+            "caption": ""
+        }
+      
+   
+  ],
+  "skillLabels": [
+      "motion-design",
+      "Look Development",
+      "boards",
+      "documentary",
+      "Data Visualization"
+  ],
+  "softwareLabels": [
+      "after-effects",
+      "cinema-4d",
+      "photoshop",
+      "Adobe Illustrator"
+  ],
+  "casestudy": {
+    "challenge": "",
+    "approach": "",
+    "results": ""
+  },
+
+  "credits": {
+    "credit1": "",
+    "credit2": ""
+  }
+}

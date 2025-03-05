@@ -1,0 +1,75 @@
+{
+  "id": "disney-imagi",
+  "title": "Imagicadamy",
+  "subtitle": "",
+  "client": "Disney",
+  "projectType": [
+      "design",
+      "look development",
+      "animation",
+      "2d animation",
+      "Rendering",
+      "photoshop",
+      "Character design",
+      "After effects",
+      "motion design",
+      "compositing",
+      "Sound design"
+  ],
+  "description": "",
+  "extendedsDescription":"",
+  "videosDescription":" ",
+  "videos": [
+      {
+          "platform": "vimeo",
+          "id": "356716386",
+          "type": "main",
+          "options": {
+              "autoplay": false,
+              "loop": true,
+              "title": false,
+              "byline": false,
+              "portrait": false,
+              "color": "ff9933"
+          }
+      }
+
+       
+        
+  ],
+  "imagesDescription":"",
+
+  "images": [
+        {
+            "url": "./images/projects/misc/mopi_random_007_.jpg",
+            "alt": "",
+            "type": "thumbnail",
+            "caption": ""
+        }
+      
+   
+  ],
+  "skillLabels": [
+      "motion-design",
+      "Look Development",
+      "boards",
+      "documentary",
+      "Data Visualization"
+  ],
+  "softwareLabels": [
+      "after-effects",
+      "cinema-4d",
+      "photoshop",
+      "Adobe Illustrator"
+  ],
+  "casestudy": {
+    "challenge": "",
+    "approach": "",
+    "results": ""
+  },
+
+  "credits": {
+    "credit1": "",
+    "credit2": ""
+  }
+}

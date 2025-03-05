@@ -86,27 +86,65 @@ padding: 0rem 4rem;
     
     
 }
-
+/* Gallery Tile with B&W to Color Hover Effect */
 .gallery-tile {
     position: relative;
     aspect-ratio: 1;
     background: #333;
     border-radius: 8%;
     overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.gallery-tile:hover {
+    transform: translateY(-5px); /* Slight lift effect on hover */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15); /* Add shadow for depth */
 }
 
 .gallery-image {
     width: 100%;
     height: 100%;
+    position: relative;
 }
 
 .gallery-image img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    filter: grayscale(90%); /* Make image black and white by default */
+    transition: filter 0.4s ease;
 }
 
-.gallery-overlay, .description-overlay {
+.gallery-tile:hover .gallery-image img {
+    filter: grayscale(0%); /* Return to full color on hover */
+}
+
+.gallery-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 0.75rem;
+    background: rgba(0, 0, 0, 0.7); /* Slightly darker for better text contrast */
+    color: white;
+    transform: translateY(100%); /* Hide overlay by default */
+    transition: transform 0.3s ease;
+}
+
+.gallery-tile:hover .gallery-overlay {
+    transform: translateY(0); /* Show overlay on hover */
+}
+
+
+
+.gallery-tile:hover .gallery-image::after {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1.5);
+}
+
+/* Keep the description overlay visible for tiles that need it */
+.description-overlay {
     position: absolute;
     bottom: 0;
     left: 0;
@@ -114,6 +152,16 @@ padding: 0rem 4rem;
     padding: 0.75rem;
     background: rgba(0, 0, 0, 0.5);
     color: white;
+}
+
+/* Add a subtle scaling effect to the image */
+.gallery-image img {
+    transform: scale(1);
+    transition: filter 0.4s ease, transform 0.4s ease;
+}
+
+.gallery-tile:hover .gallery-image img {
+    transform: scale(1.05);
 }
 
 .with-description {

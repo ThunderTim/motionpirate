@@ -1,0 +1,116 @@
+{
+  "id": "carnival",
+  "title": "Icon of the Seas",
+  "subtitle": "",
+  "client": "Impossible Beauru // Carnival",
+  "projectType": [
+      "design",
+      "look development",
+      "animation",
+      "2d animation",
+      "Rendering",
+      "photoshop",
+      "Character design",
+      "After effects",
+      "motion design",
+      "compositing",
+      "Sound design"
+  ],
+  "description": "",
+  "extendedsDescription":"",
+  "videosDescription":" ",
+  "videos": [
+      {
+          "platform": "vimeo",
+          "id": "903784168",
+          "type": "main",
+          "options": {
+              "autoplay": false,
+              "loop": true,
+              "title": false,
+              "byline": false,
+              "portrait": false,
+              "color": "ff9933"
+          }
+      },
+      {
+        "platform": "vimeo",
+        "id": "903748026",
+        "type": "main",
+        "options": {
+            "autoplay": false,
+            "loop": true,
+            "title": false,
+            "byline": false,
+            "portrait": false,
+            "color": "ff9933"
+            }
+        },
+        {
+            "platform": "vimeo",
+            "id": "903748011",
+            "type": "main",
+            "options": {
+                "autoplay": false,
+                "loop": true,
+                "title": false,
+                "byline": false,
+                "portrait": false,
+                "color": "ff9933"
+                }
+            },
+            {
+                "platform": "vimeo",
+                "id": "903748048",
+                "type": "main",
+                "options": {
+                    "autoplay": false,
+                    "loop": true,
+                    "title": false,
+                    "byline": false,
+                    "portrait": false,
+                    "color": "ff9933"
+                    }
+                }
+        
+
+
+       
+        
+  ],
+  "imagesDescription":"",
+
+  "images": [
+        {
+            "url": "./images/projects/misc/mopi_random_014_.jpg",
+            "alt": "",
+            "type": "thumbnail",
+            "caption": ""
+        }
+      
+   
+  ],
+  "skillLabels": [
+      "motion-design",
+      "Look Development",
+      "boards",
+      "documentary",
+      "Data Visualization"
+  ],
+  "softwareLabels": [
+      "after-effects",
+      "cinema-4d",
+      "photoshop",
+      "Adobe Illustrator"
+  ],
+  "casestudy": {
+    "challenge": "",
+    "approach": "",
+    "results": ""
+  },
+
+  "credits": {
+    "credit1": "",
+    "credit2": ""
+  }
+}

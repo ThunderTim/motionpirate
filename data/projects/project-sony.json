@@ -1,0 +1,98 @@
+{
+  "id": "sonyPS",
+  "title": "Sony Playstation",
+  "subtitle": "Development, R&D, Animation",
+  "client": "",
+  "projectType": [
+      "design",
+      "look development",
+      "animation",
+      "3D animation",
+      "Rendering",
+      "Redshift",
+      "Cinema 4D",
+      "motion design"
+  ],
+  "description": "",
+  "extendedsDescription":"",
+  "videosDescription":" ",
+  "videos": [
+      {
+          "platform": "vimeo",
+          "id": "903744337",
+          "type": "main",
+          "options": {
+              "autoplay": false,
+              "loop": true,
+              "title": false,
+              "byline": false,
+              "portrait": false,
+              "color": "ff9933"
+          }
+      },
+
+        {
+            "platform": "vimeo",
+            "id": "903736913",
+            "type": "",
+            "options": {
+                "autoplay": false,
+                "loop": true,
+                "title": false,
+                "byline": false,
+                "portrait": false,
+                "color": "ff9933"
+            }
+        }, 
+
+        {
+            "platform": "vimeo",
+            "id": "903735339",
+            "type": "",
+            "options": {
+                "autoplay": false,
+                "loop": true,
+                "title": false,
+                "byline": false,
+                "portrait": false,
+                "color": "ff9933"
+            }
+        }
+        
+  ],
+  "imagesDescription":"",
+
+  "images": [
+        {
+            "url": "./images/projects/misc/mopi_random_020_.jpg",
+            "alt": "",
+            "type": "thumbnail",
+            "caption": ""
+        }
+      
+   
+  ],
+  "skillLabels": [
+      "motion-design",
+      "Look Development",
+      "boards",
+      "documentary",
+      "Data Visualization"
+  ],
+  "softwareLabels": [
+      "after-effects",
+      "cinema-4d",
+      "photoshop",
+      "Adobe Illustrator"
+  ],
+  "casestudy": {
+    "challenge": "",
+    "approach": "",
+    "results": ""
+  },
+
+  "credits": {
+    "credit1": "",
+    "credit2": ""
+  }
+}

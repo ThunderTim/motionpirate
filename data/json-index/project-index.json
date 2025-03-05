@@ -59,9 +59,121 @@
         "id": "mg-pp",
         "path": "./data/projects/project-mg-pacificpower.json",
         "featured": false
+      },
+      {
+        "id": "celestial",
+        "path": "./data/projects/project-celestial.json",
+        "featured": false
+      },
+      {
+        "id": "sonyPS",
+        "path": "./data/projects/project-sony.json",
+        "featured": false
+      },
+      {
+        "id": "amazon",
+        "path": "./data/projects/project-amazon.json",
+        "featured": false
+      },
+      {
+        "id": "avl",
+        "path": "./data/projects/project-avl.json",
+        "featured": false
+      },
+      {
+        "id": "defendIn",
+        "path": "./data/projects/project-defendIn.json",
+        "featured": false
+      },
+      {
+        "id": "defend-stories-a",
+        "path": "./data/projects/project-defend-story-a.json",
+        "featured": false
+      },
+      {
+        "id": "domo-machine",
+        "path": "./data/projects/project-domo-machine.json",
+        "featured": false
+      },
+      {
+        "id": "franzia",
+        "path": "./data/projects/project-franzia.json",
+        "featured": false
+      },
+      {
+        "id": "disney-imagi",
+        "path": "./data/projects/project-disney-imagi.json",
+        "featured": false
+      },
+      
+      {
+        "id": "impact-revolution",
+        "path": "./data/projects/project-impact.json",
+        "featured": false
+      },
+      {
+        "id": "lexlaw",
+        "path": "./data/projects/project-lexLaw.json",
+        "featured": false
+      },
+      {
+        "id": "logicsource",
+        "path": "./data/projects/project-logicsource.json",
+        "featured": false
+      },
+      {
+        "id": "neptune",
+        "path": "./data/projects/project-neptune.json",
+        "featured": false
+      },
+      {
+        "id": "qualtrics",
+        "path": "./data/projects/project-qualtrics.json",
+        "featured": false
+      },
+      {
+        "id": "carnival",
+        "path": "./data/projects/project-carnival.json",
+        "featured": false
+      },
+      {
+        "id": "riot-ink",
+        "path": "./data/projects/project-riot-ink.json",
+        "featured": false
+      },
+      {
+        "id": "riot-worlds",
+        "path": "./data/projects/project-riot-worlds.json",
+        "featured": false
+      },
+      {
+        "id": "visa",
+        "path": "./data/projects/project-visa.json",
+        "featured": false
       }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     ]
   }
 
 
- 
